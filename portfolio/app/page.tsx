@@ -4,25 +4,29 @@ import AboutSection from "./components/About";
 import ExperienceSection from "./components/Experience";
 import ProjectsSection from "./components/Projects";
 import SkillsSection from "./components/Skills";
-import ContactSection from "./components/Contacts";
+import Education from "./components/Education";
+import Link from "next/link";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <Header />
-
-      <main className={styles.main}>
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ContactSection />
-      </main>
-
-      <footer className={styles.footer}>
-        © {new Date().getFullYear()} Karthika Arumugam. All rights reserved.<br />
-        <span>Developed with ❤️ and GitHub Copilot.</span>
-      </footer>
+      <div className={styles.contentWithAside}>
+        <main className={styles.main}>
+          <AboutSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <Education />
+          <div className={styles.contactLink}>
+            <Link href="/contact" className={styles.contactButton}>
+              Contact Me
+            </Link>
+          </div>
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }

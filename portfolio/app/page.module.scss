@@ -2,7 +2,9 @@
   font-family: 'Raleway', 'Segoe UI', Arial, sans-serif;
   background: #f7f9fb;
   color: #22223b;
-  min-height: 100vh;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -52,13 +54,49 @@
 
 }
 
+.contentWithAside {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
 .main {
-  max-width: 1024;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.contactLink {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+
+  .contactButton {
+    background: #22223b;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+
+    &:hover,
+    &:focus {
+      background: #4a4e69;
+    }
+  }
+}
+
+.main {
+  max-width: 1024px;
+  min-height: 90vh;
   margin: 2.5rem auto 0;
   padding: 0 1.5rem;
+  flex: 1 0 auto;
 }
 
 .footer {
+  flex-shrink: 0;
   text-align: center;
   color: #888;
   font-size: 0.98rem;
@@ -77,4 +115,21 @@
     }
   }
 
+}
+
+@media (max-width: 900px) {
+  .contentWithAside {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .educationAside {
+    margin-left: 0;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
 }

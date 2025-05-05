@@ -1,6 +1,7 @@
 "use client";
 import styles from "./header.module.scss";
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const navLinks = [
@@ -8,17 +9,27 @@ const navLinks = [
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const router = useRouter();
 
     const handleNavClick = (href: string) => {
         setMenuOpen(false);
-        const el = document.getElementById(href.replace("#", ""));
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
+        if (href.startsWith("#")) {
+            if (pathname !== "/") {
+                router.push(`/${href}`);
+            } else {
+                const el = document.getElementById(href.replace("#", ""));
+                if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        } else {
+            router.push(href);
         }
     };
 
