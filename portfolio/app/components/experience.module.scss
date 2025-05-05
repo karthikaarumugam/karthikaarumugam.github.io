@@ -1,0 +1,92 @@
+.section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    margin-bottom: 2.5rem;
+    padding: 2rem 1.5rem;
+}
+
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.experienceItem {
+    background: #f7f9fb;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem 1.2rem;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.experienceHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.companyLogo {
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.experienceHeader h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 0.2rem 0;
+    color: #22223b;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.experienceHeader span {
+    color: #4a4e69;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.clientCompany {
+    color: #7c7c7c;
+    font-size: 0.98rem;
+    margin-left: 0.5rem;
+}
+
+.period {
+    font-size: 0.98rem;
+    color: #888;
+    margin: 0;
+}
+
+.shortDescription {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 0.7rem;
+}
+
+@media (max-width: 700px) {
+    .section {
+        padding: 1.2rem 0.5rem;
+    }
+
+    .experienceItem {
+        padding: 1rem 0.5rem;
+    }
+
+    .experienceHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
