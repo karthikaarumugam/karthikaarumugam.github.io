@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "npx serve@latest out",
     "predeploy": "GITHUB_PAGES=true npm run build",
+    "postbuild": "touch out/.nojekyll",
     "clean-gh-pages": "gh-pages-clean",
     "deploy": "gh-pages -d out --dotfiles"
   },
