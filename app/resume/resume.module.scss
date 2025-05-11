@@ -1,0 +1,228 @@
+.resumeMain {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+    background: #f7f9fa;
+}
+
+.resumeSidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .profileCard {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(58, 110, 165, 0.07);
+        padding: 2rem 1.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        .profileImg {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid var(--color-primary);
+        }
+
+        .profileName {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            margin-bottom: 0.2rem;
+            text-transform: uppercase;
+        }
+
+        .profileRole {
+            color: var(--color-tertiary);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .profileContact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.98rem;
+
+            li {
+                margin-bottom: 0.4rem;
+
+                a {
+                    color: var(--color-primary);
+                    text-decoration: none;
+                    word-break: break-all;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .section {
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(58, 110, 165, 0.07);
+        padding: 2rem 1.5rem;
+        margin-bottom: 0;
+        transition: box-shadow 0.2s, background 0.2s;
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.01em;
+            border-left: 4px solid var(--color-primary); // Add border only to h2
+            padding-left: 1rem;
+            background: none;
+        }
+
+        .skillsList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: small;
+
+            li {
+                background: var(--color-accent);
+                color: var(--color-primary-dark);
+                padding: 0.4rem 1rem;
+                border-radius: 6px;
+                font-size: 0.98rem;
+                font-weight: 500;
+                box-shadow: 0 1px 4px rgba(58, 110, 165, 0.04);
+            }
+        }
+
+        .softSkillsList {
+            padding-left: 1.2rem;
+            margin: 0.2rem 0 0 0;
+            display: block;
+            color: var(--color-primary-dark);
+
+            li {
+                margin-bottom: 0.2rem;
+                padding: 0;
+                background: none;
+                border-radius: 0;
+                box-shadow: none;
+                font-size: medium;
+                font-weight: 400;
+                color: inherit;
+                display: list-item;
+            }
+        }
+
+        .educationList {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .educationCard {
+            background: var(--color-secondary-bg);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            padding: 1rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+    }
+}
+
+.resumeContent {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .section {
+        background: #fff;
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.01em;
+            border: none;
+            padding-left: 1rem;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        h3 {
+            font-size: 1.08rem;
+            color: var(--color-tertiary);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            margin-top: 0.8rem;
+            letter-spacing: 0.01em;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin: 0.5rem 0 0 0;
+
+            li {
+                margin-bottom: 0.5rem;
+                font-size: 1.02rem;
+                line-height: 1.6;
+            }
+        }
+
+        .experienceItem,
+        .projectItem {
+            margin-bottom: 2rem;
+        }
+
+        .expMeta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--color-primary-dark);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .resumeMain {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.2rem 0.5rem;
+    }
+
+    .resumeSidebar {
+        flex-direction: row;
+        gap: 1.5rem;
+
+        >.section,
+        >.profileCard {
+            flex: 1;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .resumeMain {
+        padding: 0.5rem 0.1rem;
+    }
+
+    .resumeSidebar .section,
+    .resumeSidebar .profileCard,
+    .resumeContent .section {
+        padding: 1.2rem 0.7rem;
+        border-radius: 8px;
+    }
+}
