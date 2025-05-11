@@ -1,4 +1,6 @@
 "use client";
+import { useInView } from "../hooks/useInView";
+import pageStyles from "../page.module.scss";
 import styles from "./skills.module.scss";
 import {
     FaReact, FaNodeJs, FaAws, FaDocker, FaJenkins, FaGitlab, FaAngular, FaPython,
@@ -89,33 +91,43 @@ const softSkills = [
     'Emotional Intelligence & Mentorship',
 ];
 
-const Skills: React.FC = () => (
-    <section id="skills" className={styles.section}>
-        <h2>Skills</h2>
-        {skillGroups.map(group => (
-            <div key={group.category} className={styles.skillsGroup}>
-                <h3>{group.category}</h3>
-                <div className={styles.skillsList}>
-                    {group.skills.map(skill => (
-                        <div className={styles.skillItem} key={skill.name}>
-                            <span className={styles.skillIcon}>{skill.icon}</span>
-                            <span>{skill.name}</span>
+const Skills: React.FC = () => {
+    const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });
+
+    return (
+        <section id="skills" ref={ref} className={`${pageStyles.section} ${inView ? styles.visible : ""}`}>
+            <div className={pageStyles.sectionContent}>
+                <h2>Skills</h2>
+                {skillGroups.map(group => (
+                    <div key={group.category} className={styles.skillsGroup}>
+                        <h3>{group.category}</h3>
+                        <div className={styles.skillsList}>
+                            {group.skills.map(skill => (
+                                <div className={styles.skillItem} key={skill.name}>
+                                    <span className={styles.skillIcon} tabIndex={0}>
+                                        {skill.icon}
+                                        <span className={styles.skillName}>{skill.name}</span>
+                                    </span>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                ))}
+                <div className={`${styles.softSkillsSection} ${styles.skillsGroup}`}>
+                    <h3>Soft Skills</h3>
+                    <div className={styles.skillsList}>
+                        <ul className={styles.softSkillsList}>
+                            {softSkills.map(skill => (
+                                <li key={skill}>
+                                    {skill}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        ))}
-        <div className={styles.softSkillsSection}>
-            <h3>Soft Skills</h3>
-            <ul className={styles.softSkillsList}>
-                {softSkills.map(skill => (
-                    <li key={skill}>
-                        {skill}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    </section>
-);
+        </section >
+    )
+};
 
 export default Skills;

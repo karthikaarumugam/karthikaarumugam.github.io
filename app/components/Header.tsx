@@ -1,8 +1,7 @@
 "use client";
 import styles from "./header.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const navLinks = [
     { label: "About", href: "#about" },
@@ -14,8 +13,15 @@ const navLinks = [
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 1200);
     const pathname = usePathname();
     const router = useRouter();
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const handleNavClick = (href: string) => {
         setMenuOpen(false);
@@ -41,28 +47,26 @@ export default function Header() {
                         <h1 className={styles.title}>Karthika Arumugam</h1>
                         <p className={styles.subtitle}>Technology Leader</p>
                     </div>
-                    <div className={styles.headerSocial}>
-                        <a href="https://github.com/karthikaarumugam" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <FaGithub />
-                        </a>
-                        <a href="https://linkedin.com/in/karthikaa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <FaLinkedin />
-                        </a>
-                        <a href="mailto:karthika_a2006@live.com" aria-label="Email">
-                            <FaEnvelope />
-                        </a>
-                    </div>
                 </div>
                 <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
                     <ul>
-                        {navLinks.map((link) => (
-                            <li key={link.href}>
+                        {navLinks.map((link, idx) => (
+                            <li
+                                key={link.href}
+                                style={{
+                                    transition: "transform 0.3s cubic-bezier(.4,2,.6,1), opacity 0.3s",
+                                    transform: menuOpen ? "translateY(0)" : "translateY(-10px)",
+                                    opacity: menuOpen || windowWidth > 900 ? 1 : 0,
+                                    transitionDelay: menuOpen ? `${idx * 0.06 + 0.1}s` : "0s"
+                                }}
+                            >
                                 <a
                                     href={link.href}
                                     onClick={e => {
                                         e.preventDefault();
                                         handleNavClick(link.href);
                                     }}
+                                    className={styles.navLink}
                                 >
                                     {link.label}
                                 </a>
@@ -74,6 +78,7 @@ export default function Header() {
                     className={styles.menuBtn}
                     onClick={() => setMenuOpen((open) => !open)}
                     aria-label="Toggle navigation"
+                    aria-expanded={menuOpen}
                 >
                     <span />
                     <span />

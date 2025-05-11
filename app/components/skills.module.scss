@@ -1,86 +1,104 @@
-.section {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
-    margin-bottom: 2.5rem;
-    padding: 2rem 1.5rem;
-}
-
 .skillsGroup {
+    font-family: 'Fira Code', 'Fira Mono', 'Consolas', monospace;
+    font-variant-ligatures: none;
     margin-bottom: 2rem;
-}
-
-.skillsGroup h3 {
-    font-size: 1.15rem;
-    color: #4a4e69;
-    margin-bottom: 0.7rem;
-    font-weight: 600;
-}
-
-.skillsList {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem 2.2rem;
-}
+    align-items: flex-start;
+    gap: 2rem;
 
-.skillItem {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: #f7f9fb;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    font-size: 1.05rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-    margin-bottom: 0.5rem;
-    min-width: 170px;
-    transition: box-shadow 0.2s;
-
-    &:hover {
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-    }
-}
-
-.skillIcon {
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-}
-
-.softSkillsSection {
-    margin-top: 2.5rem;
-}
-
-.softSkillsSection h3 {
-    font-size: 1.1rem;
-    color: #4a4e69;
-    margin-bottom: 0.7rem;
-    font-weight: 600;
-}
-
-.softSkillsList {
-    padding-left: 1.2rem;
-    margin: 0.5rem 0 0 0;
-}
-
-.softSkillsList li {
-    margin-bottom: 0.5rem;
-    font-size: 1.02rem;
-    line-height: 1.6;
-}
-
-@media (max-width: 700px) {
-    .section {
-        padding: 1.2rem 0.5rem;
+    h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        padding-top: 0.3rem;
+        flex-shrink: 0;
+        width: 20%;
     }
 
     .skillsList {
-        gap: 0.7rem 1rem;
-    }
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem 1rem;
 
-    .skillItem {
-        min-width: 120px;
-        font-size: 0.97rem;
-        padding: 0.4rem 0.7rem;
+        .skillItem {
+            display: flex;
+            align-items: center;
+            background: none;
+            border-radius: 8px;
+            padding: 0.5rem;
+            min-width: 0;
+            margin-bottom: 0.5rem;
+            position: relative;
+            transition: box-shadow 0.2s, background 0.2s;
+
+            &:hover,
+            &:focus-within {
+                background: var(--color-secondary-hover);
+            }
+
+            .skillIcon {
+                font-size: 2.1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            .skillName {
+                display: block;
+                opacity: 1;
+                position: static;
+                background: none;
+                color: var(--color-primary);
+                padding: 0;
+                border-radius: 0;
+                font-size: 0.5rem;
+                font-weight: 400;
+                white-space: nowrap;
+                box-shadow: none;
+                pointer-events: none;
+                transition: font-weight 0.2s, color 0.2s;
+                z-index: 10;
+                margin-top: 0.2rem;
+                text-align: center;
+            }
+
+            &:hover .skillName,
+            &:focus-within .skillName {
+                font-weight: 700;
+                color: var(--color-primary-dark);
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .skillsGroup {
+        flex-direction: column;
+        gap: 0.7rem;
+
+        h3 {
+            font-size: 1rem;
+            padding-top: 0;
+            width: auto;
+        }
+
+        .skillsList {
+            gap: 0.25rem 0.5rem;
+
+            .skillItem {
+                .skillIcon {
+                    font-size: 1.5rem;
+                }
+
+                .skillName {
+                    font-size: 0.5rem;
+                    margin-top: 0.15rem;
+                }
+            }
+        }
     }
 }

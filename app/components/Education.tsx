@@ -1,19 +1,28 @@
+"use client"
+import { useInView } from "../hooks/useInView";
+import pageStyles from "../page.module.scss";
 import styles from "./education.module.scss";
 
 export default function Education() {
+    const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });
+
     return (
-        <aside className={styles.educationAside}>
-            <h2>Education</h2>
-            <div className={styles.educationItem}>
-                <div className={styles.degree}>M.S. Computer Science</div>
-                <div className={styles.school}>University of Illinois Urbana-Champaign</div>
-                <div className={styles.year}>2010 – 2012</div>
+        <section id="education" ref={ref} className={`${pageStyles.section} ${inView ? styles.visible : ""}`}>
+            <div className={pageStyles.sectionContent}>
+                <h2>Education</h2>
+                <div className={styles.educationGrid}>
+                    <div className={styles.educationItem}>
+                        <div className={styles.degree}>M.C.A. (Master of Computer Applications)</div>
+                        <div className={styles.school}>Pondicherry University</div>
+                        <div className={styles.year}>2008 – 2011</div>
+                    </div>
+                    <div className={styles.educationItem}>
+                        <div className={styles.degree}>B.C.A. (Bachelor of Computer Applications)</div>
+                        <div className={styles.school}>Pondicherry University</div>
+                        <div className={styles.year}>2005 – 2008</div>
+                    </div>
+                </div>
             </div>
-            <div className={styles.educationItem}>
-                <div className={styles.degree}>B.E. Computer Science & Engineering</div>
-                <div className={styles.school}>Anna University, Chennai</div>
-                <div className={styles.year}>2006 – 2010</div>
-            </div>
-        </aside>
+        </section>
     );
 }

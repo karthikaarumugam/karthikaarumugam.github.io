@@ -19,11 +19,6 @@ export default function Home() {
           <ProjectsSection />
           <SkillsSection />
           <Education />
-          <div className={styles.contactLink}>
-            <Link href="/contact" className={styles.contactButton}>
-              Contact Me
-            </Link>
-          </div>
         </main>
       </div>
       <Footer />

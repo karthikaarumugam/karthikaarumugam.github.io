@@ -1,135 +1,79 @@
-.page {
-  font-family: 'Raleway', 'Segoe UI', Arial, sans-serif;
-  background: #f7f9fb;
-  color: #22223b;
-  min-height: 70vh;
+.main {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
-.header {
-  background: #fff;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-  padding: 2rem 0 1.5rem 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.section {
+  width: 100vw;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: linear-gradient(135deg, var(--background) 60%, var(--color-accent) 100%);
+  padding: 2.5rem 0;
 
-  h1 {
-    font-size: 2.5rem;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: sectionFadeIn 0.8s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  transition: background 0.2s;
+
+  &>.sectionContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, var(--color-secondary-hover) 60%, var(--background) 100%);
+  }
+
+  h2 {
+    font-size: 2rem;
     font-weight: 700;
-    margin: 0;
-    color: #22223b;
-  }
-
-  p {
-    font-size: 1.2rem;
-    color: #4a4e69;
-    margin: 0.5rem 0 1.5rem 0;
-  }
-
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-
-    a {
-      color: #4a4e69;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.05rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 4px;
-      transition: background 0.2s, color 0.2s;
-
-      &:hover,
-      &:focus {
-        background: #22223b;
-        color: #fff;
-      }
-    }
-  }
-
-}
-
-.contentWithAside {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.main {
-  flex: 1 1 0%;
-  min-width: 0;
-}
-
-.contactLink {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-
-  .contactButton {
-    background: #22223b;
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: background 0.2s;
-
-    &:hover,
-    &:focus {
-      background: #4a4e69;
-    }
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01em;
+    border-left: 4px solid var(--color-secondary);
+    padding-left: 1rem;
+    background: none;
   }
 }
 
-.main {
-  max-width: 1024px;
-  min-height: 90vh;
-  margin: 2.5rem auto 0;
-  padding: 0 1.5rem;
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex-shrink: 0;
-  text-align: center;
-  color: #888;
-  font-size: 0.98rem;
-  padding: 2rem 0 1rem 0;
-  background: none;
-}
-
-@media (max-width: 600px) {
-  .main {
-    padding: 0 0.5rem 2rem 0.5rem;
+@keyframes sectionFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-
-  .header {
-    h1 {
-      font-size: 1.7rem;
-    }
-  }
-
 }
 
 @media (max-width: 900px) {
-  .contentWithAside {
-    flex-direction: column;
+  .main {
+    padding: 0;
     gap: 0;
   }
 
-  .main {
-    width: 100%;
-  }
+  .section {
+    padding: 1.2rem 0;
 
-  .educationAside {
-    margin-left: 0;
-    margin-bottom: 2rem;
-    max-width: 100%;
+    &>.sectionContent {
+      padding: 0 0.7rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      padding-left: 0.7rem;
+    }
   }
 }
