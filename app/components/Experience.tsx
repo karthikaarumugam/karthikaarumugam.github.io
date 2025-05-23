@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useInView } from "../hooks/useInView";
 import pageStyles from "../page.module.scss";

@@ -17,7 +17,7 @@ export default function Footer() {
                     <FaEnvelope />
                 </a>
             </div>
-            © {new Date().getFullYear()} {info.contact.name}. All rights reserved.<br />
+            © {new Date().getFullYear()} {info.hero.name}. All rights reserved.<br />
             <span>Developed with ❤️ and little help from GitHub Copilot.</span>
         </footer>
     );
