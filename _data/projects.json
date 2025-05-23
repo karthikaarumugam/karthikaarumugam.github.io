@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Legacy System Modernization",
+    "context": "Migrated legacy hospitality systems from Node.js to React/Next.js.",
+    "why": "To boost scalability, maintainability, and user experience.",
+    "how": "Led cross-functional teams through seamless transitions, adopting modern frameworks and best practices.",
+    "results": "Enhanced performance, accelerated feature delivery, and improved customer satisfaction."
+  },
+  {
+    "title": "Cloud Migration & API Integrations",
+    "context": "Directed Opera V5 to OHIP cloud migration.",
+    "why": "To enable robust API integrations and real-time data exchange across platforms.",
+    "how": "Orchestrated API-first architecture and cloud adoption.",
+    "results": "Improved system reliability and positioned operations for future technology adoption."
+  },
+  {
+    "title": "Enterprise Monitoring Transformation",
+    "context": "Migrated from Splunk to Datadog for enterprise-wide monitoring.",
+    "why": "To empower teams with real-time insights and reduce incident response times.",
+    "how": "Developed dashboards and automated alerts for actionable insights.",
+    "results": "Reduced incident response times by 30%."
+  },
+  {
+    "title": "Operational Workflow Automation",
+    "context": "Built host-facing dashboards to automate operational workflows.",
+    "why": "To streamline pre-arrival, group, and F&B processes and reduce manual workload.",
+    "how": "Developed custom dashboards and automated key operational tasks.",
+    "results": "Reduced manual workload by 20% and elevated guest service efficiency."
+  },
+  {
+    "title": "Security & Compliance Enhancement",
+    "context": "Integrated Azure AD MFA and enforced PCI/PII standards across applications.",
+    "why": "To strengthen enterprise security posture and ensure regulatory alignment.",
+    "how": "Implemented secure authentication and compliance checks.",
+    "results": "Improved security and ensured compliance with industry standards."
+  },
+  {
+    "title": "CI/CD Pipeline Optimization",
+    "context": "Migrated from Bitbucket/Jenkins to GitLab for CI/CD.",
+    "why": "To automate deployments and improve release reliability.",
+    "how": "Optimized pipelines and automated deployment processes.",
+    "results": "Accelerated deployment cycles and increased engineering productivity."
+  },
+  {
+    "title": "Global Brand Launches & Migrations",
+    "context": "Launched new digital brands and managed large-scale multilingual website migrations for Hasbro.",
+    "why": "To improve global reach, accessibility, and SEO compliance.",
+    "how": "Oversaw multilingual content deployment and ensured accessibility standards.",
+    "results": "Improved digital asset performance and global reach."
+  },
+  {
+    "title": "Web Platform Redesign",
+    "context": "Redesigned Tracfone’s web platforms from IBM Portal to Angular SPA.",
+    "why": "To improve site performance, user experience, and engagement.",
+    "how": "Integrated analytics and automated testing pipelines.",
+    "results": "Improved site performance, user experience, and reduced regression testing time by 40%."
+  }
+]

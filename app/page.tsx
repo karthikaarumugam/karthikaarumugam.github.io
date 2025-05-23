@@ -11,9 +11,9 @@ export default function Home() {
       <div className={styles.contentWithAside}>
         <main className={styles.main}>
           <AboutSection />
+          <SkillsSection />
           <ExperienceSection />
           <ProjectsSection />
-          <SkillsSection />
           <Education />
         </main>
       </div>

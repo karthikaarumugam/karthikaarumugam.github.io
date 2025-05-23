@@ -2,6 +2,7 @@
 import styles from "../page.module.scss";
 import thisStyles from "./page.module.scss";
 import { useState } from "react";
+import info from "../../_data/info.json";
 
 export default function ContactPage() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -13,7 +14,7 @@ export default function ContactPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        window.location.href = `mailto:karthika_a2006@live.com?subject=Message from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(
+        window.location.href = `mailto:${info.contact.email} ?subject=Message from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(
             `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
         )}`;
         setSubmitted(true);
@@ -27,16 +28,13 @@ export default function ContactPage() {
                         <h2 className={thisStyles.contactHeader}>
                             Get in touch <span className={thisStyles.wave}>👋</span>
                         </h2>
-                        <p className={thisStyles.contactIntro}>
-                            Drop a message, my inbox is always open!
-                        </p>
+                        <p className={thisStyles.contactIntro}>{info.contact.message}</p>
                         <p className={thisStyles.contactSubtext}>
-                            <span className={thisStyles.raven} role="img" aria-label="raven">🪶</span>
-                            (unless the internet goes down, then just send a raven)
+                            {info.contact.comic} <span className={thisStyles.raven} role="img" aria-label="raven">🪶</span>
                         </p>
                         <p>
-                            <a href="https://linkedin.com/in/karthikaa" target="_blank" rel="noopener noreferrer">LinkedIn</a> |{" "}
-                            <a href="https://github.com/karthikaarumugam" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href={info.contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a> |{" "}
+                            <a href={info.contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
                         </p>
                     </div>
                 </section>

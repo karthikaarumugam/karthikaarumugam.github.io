@@ -1,26 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Fira+Sans:wght@400;700&family=Montserrat:wght@700;800&family=Iceberg&family=Noto+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-  --background: #fff;
-  --foreground: #171717;
-  --color-dark-gray: #666;
-  --color-gray: #888;
-  --color-light-gray: #aaa;
-  --color-primary: #3a6ea5;
-  --color-primary-dark: #262d4f;
-  --color-accent: #e3eaff;
-  --color-secondary: #7babde;
-  --color-secondary-dark: #233547;
-  --color-secondary-bg: #eeefff;
-  --color-secondary-hover: #e3eaff;
-  --color-tertiary: #a087bf;
-  --color-tertiary-bg: #e7d4ff;
+  /* White background, bold salmon-pink and corporate blue accents */
+  --color-white: #fff;
+  --color-bg: #fff;
+  --color-bg-alt: #f7faff;
+  /* very light blue for subtle alt backgrounds */
+  --color-card: #fff;
+  --color-accent: #ffe5e0;
+  /* very light salmon accent */
+  --color-primary: #1a237e;
+  /* Corporate blue for headers/titles */
+  --color-secondary: #ff6f61;
+  /* Bold salmon-pink for highlights */
+  --color-tertiary: #ff6f61;
+  /* Salmon-pink for strong, etc */
+  --color-quaternary: #1976d2;
+  /* Lighter blue for secondary accents */
+  --color-link: #1a237e;
+  --color-link-hover: #ff6f61;
+  --color-border: #e0e7ef;
+  --color-heading: #1a237e;
+  --color-text: #232323;
+
+  /* Font families */
+  --font-main: 'Roboto', 'Fira Code', 'Fira Mono', 'SF Mono', 'Roboto Mono', monospace;
+  --font-heading: 'Iceberg', 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-bg: #181a20;
+    --color-bg-alt: #23293a;
+    --color-card: #23293a;
+    --color-accent: #2e2e23;
+    --color-primary: #90caf9;
+    /* Light blue for headers/titles */
+    --color-secondary: #ffb3ab;
+    /* Soft salmon-pink for highlights */
+    --color-tertiary: #ffb3ab;
+    --color-quaternary: #64b5f6;
+    --color-link: #90caf9;
+    --color-link-hover: #ffb3ab;
+    --color-border: #374151;
+    --color-heading: #90caf9;
+    --color-text: #f5f5f5;
   }
 }
 
@@ -29,12 +53,9 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Roboto', 'Noto Sans', Helvetica, sans-serif;
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,68 +67,85 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--color-link);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-h1 {
-  font-family: 'Iceberg', 'Montserrat', 'Noto Sans', Arial, sans-serif;
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+  margin-top: 1.5rem;
+  letter-spacing: 0.01em;
 }
 
 h2 {
   font-size: 1.6rem;
-  color: var(--color-primary-dark);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
 }
 
 h3 {
   font-size: 1.13rem;
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
   font-weight: 600;
   margin-bottom: 0.2rem;
   margin-top: 0.8rem;
-  letter-spacing: 0.01em;
 }
 
 ul {
   padding-left: 1.2rem;
-  margin: 0.5rem 0 0 0;
+  margin-bottom: 1.5rem;
 
   li {
     margin-bottom: 0.5rem;
     font-size: 1.02rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 }
 
-p {
-  margin-bottom: 0.5rem;
-  font-family: 'Roboto', 'Noto Sans', Arial, sans-serif;
+p,
+ul,
+ol {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
 
-  strong {
-    color: var(--color-primary-dark);
-    font-family: 'Fira Sans', 'Noto Sans', Arial, sans-serif;
-    font-weight: 500;
-    font-style: oblique;
-  }
+strong {
+  color: var(--color-tertiary);
+  font-weight: 600;
+  font-style: oblique;
 }
 
 section {
-  background: var(--background);
+  background: var(--color-card);
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
   margin-bottom: 2.5rem;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (max-width: 900px) {
+
+  p,
+  ul,
+  ol {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
   }
-}
 
-@media (max-width: 600px) {
   section {
     padding: 1.2rem 0.5rem;
   }

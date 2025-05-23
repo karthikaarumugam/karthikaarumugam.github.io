@@ -4,9 +4,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0.7rem 2.5rem;
+    padding: 0 1.5rem;
     font-family: 'Pluvix', Arial, Helvetica, sans-serif;
 }
 
@@ -87,7 +85,8 @@
         position: relative;
     }
 
-    a {
+    a,
+    button {
         color: var(--color-primary);
         text-decoration: none;
         font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;

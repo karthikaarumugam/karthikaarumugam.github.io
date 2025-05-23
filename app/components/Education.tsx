@@ -1,8 +1,9 @@
 "use client"
 import { useInView } from "../hooks/useInView";
+import Image from "next/image";
 import pageStyles from "../page.module.scss";
 import styles from "./education.module.scss";
-import { educationList } from "../content";
+import info from "../../_data/info.json";
 
 export default function Education() {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });
@@ -12,11 +13,32 @@ export default function Education() {
             <div className={pageStyles.sectionContent}>
                 <h2>Education</h2>
                 <div className={styles.educationGrid}>
-                    {educationList.map((edu, idx) => (
+                    {info.education.map((edu, idx) => (
                         <div className={styles.educationItem} key={idx}>
-                            <div className={styles.degree}>{edu.degree}</div>
-                            <div className={styles.school}>{edu.university}</div>
-                            <div className={styles.year}>{edu.year}</div>
+                            <div>
+                                <div className={styles.degree}>{edu.degree}</div>
+                                <div className={styles.school}>{edu.university}</div>
+                                <div className={styles.year}>{edu.year}</div>
+                            </div>
+                        </div>
+                    ))}
+                    {info.certifications.map((cert, idx) => (
+                        <div className={styles.educationItem} key={idx}>
+                            <div>
+                                <div className={styles.degree}>{cert.name}</div>
+                                <div className={styles.school}>{cert.issuer}</div>
+                                <div className={styles.year}>{cert.issueDate}</div>
+                                {cert.logo && (
+                                    <Image
+                                        src={cert.logo}
+                                        alt={cert.issuer}
+                                        className={styles.eduLogo}
+                                        width={40}
+                                        height={40}
+                                        style={{ marginLeft: "auto" }}
+                                    />
+                                )}
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -2,7 +2,8 @@
 import { useInView } from "../hooks/useInView";
 import pageStyles from "../page.module.scss";
 import styles from "./skills.module.scss";
-import { skillGroups, softSkills } from "../content";
+import { skillGroups } from "../../_data/content";
+import softSkills from '../../_data/softSkills.json';
 
 const Skills: React.FC = () => {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });
@@ -18,8 +19,7 @@ const Skills: React.FC = () => {
                             {group.skills.map(skill => (
                                 <div className={styles.skillItem} key={skill.name}>
                                     <span className={styles.skillIcon} tabIndex={0}>
-                                        {skill.icon}
-                                        <span className={styles.skillName}>{skill.name}</span>
+                                        {skill.icon}<span className={styles.skillName}>{skill.name}</span>
                                     </span>
                                 </div>
                             ))}
@@ -30,10 +30,8 @@ const Skills: React.FC = () => {
                     <h3>Soft Skills</h3>
                     <div className={styles.skillsList}>
                         <ul className={styles.softSkillsList}>
-                            {softSkills.map(skill => (
-                                <li key={skill}>
-                                    {skill}
-                                </li>
+                            {softSkills.map((skill, idx) => (
+                                <li key={idx}>{skill}</li>
                             ))}
                         </ul>
                     </div>

@@ -3,7 +3,9 @@
 import { useInView } from "../hooks/useInView";
 import pageStyles from "../page.module.scss";
 import styles from "./experience.module.scss";
-import { experiences } from "../content";
+import experiences from "../../_data/career.json";// At the top of your file
+import dynamic from "next/dynamic";
+const FaBuilding = dynamic(() => import("react-icons/fa").then(mod => mod.FaBuilding), { ssr: false });
 
 export default function ExperienceSection() {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });
@@ -17,19 +19,10 @@ export default function ExperienceSection() {
                     <div className={styles.timelineList}>
                         {experiences.map((exp, idx) => (
                             <div className={styles.timelineItem} key={idx}>
-                                <div className={styles.timelineDot} />
-                                <div className={styles.timelineContent}>
+                                <div className={styles.timelineDot} ><FaBuilding size={20} color="var(--color-primary)" /></div>
+                                <div className={styles.timelineSide}>
                                     <div className={styles.experienceHeader}>
-                                        {exp.logo && (
-                                            <img
-                                                src={exp.logo}
-                                                alt={`${exp.company} logo`}
-                                                className={styles.companyLogo}
-                                                width={40}
-                                                height={40}
-                                                loading="lazy"
-                                            />
-                                        )}
+                                        {/* {exp.logo && (<img src={exp.logo} alt={`${exp.company} logo`} className={styles.companyLogo} width={40} height={40} loading="lazy" />)} */}
                                         <div>
                                             <h3>
                                                 {exp.role} <span>@ {exp.company}</span>{" "}
@@ -41,15 +34,20 @@ export default function ExperienceSection() {
                                             </h3>
                                             <p className={styles.period}>{exp.period}</p>
                                         </div>
+
+                                        {exp.shortDescription && (
+                                            <p className={styles.shortDescription}>{exp.shortDescription}</p>
+                                        )}
                                     </div>
-                                    {exp.shortDescription && (
-                                        <p className={styles.shortDescription}>{exp.shortDescription}</p>
-                                    )}
-                                    <ul>
-                                        {exp.responsibilities.map((desc, i) => (
-                                            <li key={i} dangerouslySetInnerHTML={{ __html: desc }} />
-                                        ))}
-                                    </ul>
+                                </div>
+                                <div className={styles.timelineSide}>
+                                    <div className={styles.experienceDetails}>
+                                        <ul>
+                                            {exp.responsibilities.map((desc, i) => (
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: desc }} />
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         ))}

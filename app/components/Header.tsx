@@ -2,6 +2,7 @@
 import styles from "./header.module.scss";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import info from "../../_data/info.json";
 
 const navLinks = [
     { label: "About", href: "#about" },
@@ -17,6 +18,11 @@ export default function Header() {
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 1200);
     const pathname = usePathname();
     const router = useRouter();
+    const [dark, setDark] = useState(false);
+
+    useEffect(() => {
+        document.body.classList.toggle("dark", dark);
+    }, [dark]);
 
     useEffect(() => {
         const handleResize = () => setWindowWidth(window.innerWidth);
@@ -45,8 +51,9 @@ export default function Header() {
             <div className={styles.headerContent}>
                 <div className={styles.brandArea}>
                     <div>
-                        <h1 className={styles.title}>Karthika Arumugam</h1>
-                        <p className={styles.subtitle}>Technology Leader</p>
+                        <h1 className={styles.title}>{info.hero.name}</h1>
+                        {/* <p className={styles.subtitle}>{info.hero.title}</p> */}
+                        {/* <p className={styles.subtitle}>{info.hero.subtitle}</p> */}
                     </div>
                 </div>
                 <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
@@ -73,6 +80,16 @@ export default function Header() {
                                 </a>
                             </li>
                         ))}
+                        <li key={"toggle"} className={styles.toggle}>
+                            <button
+                                className={styles.toggleBtn}
+                                onClick={() => setDark(d => !d)}
+                                aria-label="Toggle dark mode"
+                                aria-pressed={dark}
+                            >
+                                {dark ? "Light Mode" : "Dark Mode"}
+                            </button>
+                        </li>
                     </ul>
                 </nav>
                 <button
