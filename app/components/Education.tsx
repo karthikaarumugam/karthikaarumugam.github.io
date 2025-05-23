@@ -19,6 +19,16 @@ export default function Education() {
                                 <div className={styles.degree}>{edu.degree}</div>
                                 <div className={styles.school}>{edu.university}</div>
                                 <div className={styles.year}>{edu.year}</div>
+                                {edu.logo && (
+                                    <Image
+                                        src={edu.logo}
+                                        alt={edu.university}
+                                        className={styles.eduLogo}
+                                        width={40}
+                                        height={40}
+                                        style={{ marginLeft: "auto" }}
+                                    />
+                                )}
                             </div>
                         </div>
                     ))}

@@ -1,28 +1,30 @@
 "use client";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaMobile, FaGlobe } from "react-icons/fa";
 import styles from "../page.module.scss";
 import resumeStyles from "./resume.module.scss";
 import { skillGroups } from "../../_data/content";
 import softSkills from '../../_data/softSkills.json';
 import experiences from "../../_data/career.json";
-import projects from '../../_data/projects.json';
 import info from '../../_data/info.json';
 
 export default function Resume() {
     return (
         <div className={styles.page}>
             <main className={resumeStyles.resumeMain}>
-                <aside className={resumeStyles.resumeSidebar}>
-                    <div className={resumeStyles.profileCard}>
-                        <h1 className={resumeStyles.profileName}>{info.hero.name}</h1>
-                        <h2 className={resumeStyles.profileRole}>{info.hero.title}</h2>
-                        <h3 className={resumeStyles.profileRole}>{info.hero.subtitle}</h3>
-                        <div className={resumeStyles.profileContact}>
-                            <a href={info.contact.github} style={{ color: "#24292f" }} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-                            <a href={info.contact.linkedin} style={{ color: "#0077b5" }} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-                            <a href={`mailto:${info.contact.email}`} style={{ color: "#ea4335" }} aria-label="Email"><FaEnvelope /></a>
-                        </div>
+                <div className={resumeStyles.profileCard}>
+                    <h1 className={resumeStyles.profileName}>{info.hero.name}</h1>
+                    <h2 className={resumeStyles.profileRole}>{info.hero.title}</h2>
+                    <h3 className={resumeStyles.profileRole}>{info.hero.subtitle}</h3>
+                    <div className={resumeStyles.profileContact}>
+                        <a href={`https://${info.contact.github}`} style={{ color: "#24292f" }} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a> {info.contact.github}
+                        <a href={`https://${info.contact.linkedin}`} style={{ color: "#0077b5" }} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a> {info.contact.linkedin}
+                        <a href={`https://${info.contact.portfolio}`} style={{ color: "#1a237e" }} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaGlobe /></a> {info.contact.portfolio}
                     </div>
+                    <div className={resumeStyles.profileContact}>
+                        <a href={`mailto:${info.contact.email}`} style={{ color: "#ea4335" }} aria-label="Email"><FaEnvelope /> {info.contact.email}</a>| <FaMobile /> {info.contact.phone}
+                    </div>
+                </div>
+                <aside className={resumeStyles.resumeSidebar}>
                     <div className={resumeStyles.section}>
                         <h2>Skills</h2>
                         <ul className={resumeStyles.skillsList}>
@@ -75,7 +77,7 @@ export default function Resume() {
                             </div>
                         ))}
                     </div>
-                    <div className={resumeStyles.section}>
+                    {/* <div className={resumeStyles.section}>
                         <h2>Projects</h2>
                         <ul className={resumeStyles.projectList}>
                             {projects.map((proj, idx) => (
@@ -88,9 +90,9 @@ export default function Resume() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </div> */}
                 </section>
-            </main>
-        </div>
+            </main >
+        </div >
     );
 }

@@ -30,11 +30,10 @@
   }
 
   &:hover {
-    background: linear-gradient(135deg, var(--color-secondary-hover) 60%, var(--background) 100%);
+    background: linear-gradient(135deg, var(--color-link-hover) 60%, var(--background) 100%);
   }
 
   h2 {
-    font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-primary);

@@ -32,10 +32,6 @@ export default function ContactPage() {
                         <p className={thisStyles.contactSubtext}>
                             {info.contact.comic} <span className={thisStyles.raven} role="img" aria-label="raven">🪶</span>
                         </p>
-                        <p>
-                            <a href={info.contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a> |{" "}
-                            <a href={info.contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </p>
                     </div>
                 </section>
 

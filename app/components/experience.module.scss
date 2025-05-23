@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     min-height: 180px;
 
     ul {
@@ -148,28 +148,34 @@
         transform: none;
     }
 
-    .timelineItem,
-    .timelineItem:nth-child(even) {
-        flex-direction: column;
+    .timelineItem {
+        flex-direction: column !important;
+        margin-bottom: 0;
         min-height: unset;
     }
 
     .timelineItem .timelineSide {
-        width: 100%;
-        margin-bottom: 1.5rem;
+        width: auto;
         justify-content: flex-start;
+
+        h3,
+        p {
+            text-align: start !important;
+            margin: .5rem auto;
+        }
     }
 
     .timelineItem .experienceHeader,
     .timelineItem .experienceDetails {
         min-width: 0;
         max-width: 100%;
-        margin-left: 2.5rem;
         align-items: flex-start !important;
+        border: none;
+        box-shadow: none;
     }
 
     .timelineDot {
-        left: 24px;
+        left: 0;
         transform: none;
         top: 2.2rem;
     }

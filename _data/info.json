@@ -18,12 +18,14 @@
   "education": [{
       "degree": "M.C.A. (Master of Computer Applications)",
       "university": "Pondicherry University",
-      "year": "2008 - 2011"
+      "year": "2008 - 2011",
+      "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
     },
     {
       "degree": "B.C.A. (Bachelor of Computer Applications)",
       "university": "Pondicherry University",
-      "year": "2005 - 2008"
+      "year": "2005 - 2008",
+      "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
     }
   ],
   "certifications": [{
@@ -111,10 +113,12 @@
     ]
   },
   "contact": {
+    "phone": "(309) 531-6743",
     "message": "Interested in collaborating, discussing technology, or sharing insights? Let’s connect! I’m always open to new opportunities and conversations.",
     "comic": "(unless the internet goes down, then just send a raven)",
     "email": "karthika_a2006@live.com",
-    "linkedin": "https://linkedin.com/in/karthikaa",
-    "github": "https://github.com/karthikaarumugam"
+    "linkedin": "linkedin.com/in/karthikaa",
+    "portfolio": "karthikaarumugam.github.io",
+    "github": "github.com/karthikaarumugam"
   }
 }

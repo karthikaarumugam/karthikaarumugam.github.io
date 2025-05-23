@@ -4,60 +4,74 @@
     margin: 0 auto;
     padding: 2.5rem 1rem;
     background: #f7f9fa;
+    flex-wrap: wrap;
 }
+
+.profileCard {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1.2rem 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    page-break-after: avoid !important;
+    text-align: center !important;
+    padding: 1.2rem 0 1.2rem 0 !important;
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+    flex: 0 0 100%;
+
+    .profileImg {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 4px solid var(--color-primary);
+    }
+
+    .profileName {
+        margin-bottom: 0.2rem;
+        text-transform: uppercase;
+    }
+
+    .profileRole {
+        margin: 0;
+    }
+
+    h2 {
+        color: var(--color-secondary);
+        font-size: larger;
+    }
+
+    h3 {
+        color: var(--color-tertiary);
+        font-size: large;
+    }
+
+    .profileContact {
+        margin-top: 1rem;
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            word-break: break-all;
+            padding-left: 1rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 
 .resumeSidebar {
     flex: 1;
     display: flex;
     flex-direction: column;
-
-    .profileCard {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 12px rgba(58, 110, 165, 0.07);
-        padding: 2rem 1.5rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-
-        .profileImg {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 4px solid var(--color-primary);
-        }
-
-        .profileName {
-            color: var(--color-primary-dark);
-            margin-bottom: 0.2rem;
-            text-transform: uppercase;
-        }
-
-        .profileRole {
-            color: var(--color-tertiary);
-        }
-
-        .profileContact {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            li {
-                margin-bottom: 0.4rem;
-
-                a {
-                    color: var(--color-primary);
-                    text-decoration: none;
-                    word-break: break-all;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-    }
 
     .section {
         background: #fff;
@@ -68,7 +82,6 @@
 
         h2 {
             font-weight: 700;
-            color: var(--color-primary-dark);
             margin-bottom: 1.2rem;
             letter-spacing: 0.01em;
             border-left: 4px solid var(--color-primary); // Add border only to h2
@@ -82,14 +95,13 @@
             margin: 0;
             display: flex;
             flex-wrap: wrap;
-            font-size: small;
+            gap: 0 1rem;
 
             li {
                 background: var(--color-accent);
-                color: var(--color-primary-dark);
                 padding: 0.4rem 1rem;
                 border-radius: 6px;
-                font-size: 0.98rem;
+                font-size: small;
                 font-weight: 500;
                 box-shadow: 0 1px 4px rgba(58, 110, 165, 0.04);
             }
@@ -99,7 +111,6 @@
             padding-left: 1.2rem;
             margin: 0.2rem 0 0 0;
             display: block;
-            color: var(--color-primary-dark);
 
             li {
                 margin-bottom: 0.2rem;
@@ -121,7 +132,7 @@
         }
 
         .educationCard {
-            background: var(--color-secondary-bg);
+            background: var(--color-bg-alt);
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
             padding: 1rem 1.2rem;
@@ -144,7 +155,6 @@
         h2 {
             font-size: 1.35rem;
             font-weight: 700;
-            color: var(--color-primary-dark);
             margin-bottom: 1.2rem;
             letter-spacing: 0.01em;
             border: none;
@@ -180,7 +190,6 @@
         .expMeta {
             display: flex;
             justify-content: space-between;
-            color: var(--color-primary-dark);
             font-size: 1rem;
             margin-bottom: 0.5rem;
         }
@@ -220,22 +229,128 @@
 
 @media print {
 
-    .header,
-    .footer,
-    .printBtn {
-        display: none !important;
-    }
-
     .resumeMain {
-        box-shadow: none !important;
-        background: #fff !important;
-    }
-
-    // Optional: remove page padding/margins for print
-    .resumeMain,
-    .resumeSidebar,
-    .resumeContent {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
+        background: #fff !important;
+        box-shadow: none !important;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+    }
+
+    .profileCard {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 1.2rem 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background: #fff !important;
+        page-break-after: avoid !important;
+        text-align: center !important;
+        padding: 1.2rem 0 1.2rem 0 !important;
+        position: static !important;
+        left: auto !important;
+        transform: none !important;
+    }
+
+    .resumeSidebar,
+    .resumeContent {
+        display: table-cell !important;
+        vertical-align: top !important;
+        background: #fff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+
+    .resumeSidebar {
+        width: 32% !important;
+        min-width: 200px !important;
+        max-width: 320px !important;
+    }
+
+    .resumeContent {
+        width: 68% !important;
+    }
+
+    .resumeSidebar .profileCard,
+    .resumeSidebar .section,
+    .resumeContent .section {
+        box-shadow: none !important;
+        background: #fff !important;
+        padding: 0.5rem 0 !important;
+        border-radius: 0 !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .resumeSidebar .profileImg {
+        border-width: 2px !important;
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .resumeSidebar .profileName,
+    .resumeSidebar .profileRole,
+    .resumeSidebar .profileContact,
+    .resumeSidebar .section,
+    .resumeContent .section {
+        color: #222 !important;
+        background: none !important;
+    }
+
+    .resumeSidebar .skillsList li,
+    .resumeSidebar .softSkillsList li {
+        background: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        color: #222 !important;
+    }
+
+    .resumeSidebar .skillsList li {
+        border: 1px solid #bbb !important;
+        padding: 0.2rem 0.7rem !important;
+    }
+
+    .resumeSidebar .softSkillsList li {
+        padding-left: 0 !important;
+    }
+
+    .resumeSidebar .educationCard {
+        background: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0.2rem 0 !important;
+    }
+
+    .resumeContent .section h2,
+    .resumeSidebar .section h2 {
+        border-left: 2px solid #222 !important;
+        padding-left: 0.5rem !important;
+        background: none !important;
+        color: #222 !important;
+    }
+
+    .resumeContent .section h3 {
+        color: #444 !important;
+    }
+
+    .resumeContent .experienceItem,
+    .resumeContent .projectItem {
+        margin-bottom: 1rem !important;
+    }
+
+    .resumeContent .expMeta {
+        font-size: 0.95rem !important;
     }
 }

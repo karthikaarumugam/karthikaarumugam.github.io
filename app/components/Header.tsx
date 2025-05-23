@@ -6,9 +6,9 @@ import info from "../../_data/info.json";
 
 const navLinks = [
     { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
-    { label: "Skills", href: "#skills" },
     { label: "Resume", href: "/resume" },
     { label: "Contact", href: "/contact" },
 ];
@@ -81,14 +81,12 @@ export default function Header() {
                             </li>
                         ))}
                         <li key={"toggle"} className={styles.toggle}>
-                            <button
+                            <input
+                                type="checkbox"
                                 className={styles.toggleBtn}
                                 onClick={() => setDark(d => !d)}
                                 aria-label="Toggle dark mode"
-                                aria-pressed={dark}
-                            >
-                                {dark ? "Light Mode" : "Dark Mode"}
-                            </button>
+                            />
                         </li>
                     </ul>
                 </nav>
