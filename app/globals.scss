@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Fira+Sans:wght@400;700&family=Montserrat:wght@700;800&family=Noto+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Iceberg&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Fira+Sans:wght@400;700&family=Montserrat:wght@700;800&family=Noto+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Iceberg&display=swap');
 
 :root {
   /* White background, bold salmon-pink and corporate blue accents */
   --color-white: #fff;
   --color-bg: #fff;
-  --color-bg-alt: #f7faff;
+  --color-bg-alt: #f7f9fa;
   /* very light blue for subtle alt backgrounds */
   --color-card: #fff;
   --color-accent: #ffe5e0;
@@ -12,7 +12,7 @@
   --color-primary: #1a237e;
   /* Corporate blue for headers/titles */
   --color-secondary: #910c00;
-  /* Bold salmon-pink for highlights */
+  /* Brick red for accents */
   --color-tertiary: #ff6f61;
   /* Salmon-pink for strong, etc */
   --color-quaternary: #1976d2;
@@ -22,6 +22,12 @@
   --color-border: #e0e7ef;
   --color-heading: #1a237e;
   --color-text: #232323;
+
+  /* Accent backgrounds for contrast sections */
+  --color-section-dark: #1a237e;
+  --color-section-light: #fff;
+  --color-section-accent: #ff6f61;
+  --color-section-brick: #910c00;
 
   /* Font families */
   --font-main: 'Roboto', 'Fira Code', 'Fira Mono', 'SF Mono', 'Roboto Mono', monospace;
@@ -35,9 +41,7 @@
     --color-card: #23293a;
     --color-accent: #2e2e23;
     --color-primary: #90caf9;
-    /* Light blue for headers/titles */
     --color-secondary: #ffb3ab;
-    /* Soft salmon-pink for highlights */
     --color-tertiary: #ffb3ab;
     --color-quaternary: #64b5f6;
     --color-link: #90caf9;
@@ -45,6 +49,11 @@
     --color-border: #374151;
     --color-heading: #90caf9;
     --color-text: #f5f5f5;
+
+    --color-section-dark: #23293a;
+    --color-section-light: #181a20;
+    --color-section-accent: #ffb3ab;
+    --color-section-brick: #ffb3ab;
   }
 }
 
@@ -92,15 +101,21 @@ h6 {
 }
 
 h2 {
+  color: var(--color-secondary);
   font-size: 1.6rem;
+  font-size: larger;
 }
 
 h3 {
-  font-size: 1.13rem;
-  color: var(--color-secondary);
+  color: var(--color-tertiary);
+  font-size: large;
   font-weight: 600;
   margin-bottom: 0.2rem;
   margin-top: 0.8rem;
+}
+
+h4 {
+  color: var(--color-secondary);
 }
 
 ul {
@@ -129,11 +144,57 @@ strong {
 }
 
 section {
-  background: var(--color-card);
-  border-radius: 12px;
+  background: var(--color-section-light);
+  color: var(--color-primary);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   padding: 1.5rem 1rem;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+
+  &:nth-child(odd) {
+    color: #fff;
+    border-left: 8px solid var(--color-section-accent);
+  }
+
+  &:nth-child(even) {
+    background: var(--color-section-light);
+    color: var(--color-primary);
+    border-left: 8px solid var(--color-section-brick);
+  }
+
+  &:hover {
+    border: none;
+
+    &:nth-child(odd) {
+      border-right: 8px solid var(--color-section-accent);
+    }
+
+    &:nth-child(even) {
+      border-right: 8px solid var(--color-section-brick);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit;
+    background: none;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  strong {
+    color: var(--color-tertiary);
+    font-weight: 700;
+  }
 }
 
 @media (max-width: 900px) {
@@ -147,7 +208,7 @@ section {
   }
 
   section {
-    padding: 1.2rem 0.5rem;
+    padding: 1.5rem 0.7rem;
   }
 }
 

@@ -13,7 +13,6 @@
 
         li {
             color: var(--color-text);
-            /* font-size, margin, line-height inherited from global */
         }
     }
 
@@ -38,14 +37,13 @@
         position: relative;
         z-index: 2;
         margin: 0 1.5rem;
-        /* enough space between bundles */
         justify-content: flex-end;
     }
 
     .experienceHeader {
         display: flex;
         flex-direction: column;
-        margin-bottom: 0;
+        margin-top: 2rem;
         background: none;
         border: none;
         box-shadow: none;
@@ -56,11 +54,11 @@
         h3 {
             color: var(--color-heading);
 
-            /* font-size, font-weight, margin inherited from global */
             span {
                 display: block;
                 color: var(--color-primary);
                 font-weight: 500;
+                font-size: small;
             }
         }
     }
@@ -77,20 +75,16 @@
 
     .clientCompany {
         color: var(--color-secondary);
-        /* font-size, margin inherited from global */
     }
 
     .period {
         color: var(--color-secondary);
-        /* font-size, margin inherited from global */
     }
 
     .experienceDetails {
         background: var(--color-card);
         border-radius: 8px;
         box-shadow: 0 4px 24px -8px #020c1bb3;
-        border: 1px solid var(--color-border);
-        /* padding, min-width, width, margin inherited from global or parent */
         position: relative;
         transition: box-shadow 0.2s;
         display: flex;
@@ -104,11 +98,9 @@
 
     .shortDescription {
         color: var(--color-text);
-        /* margin inherited from global */
     }
 }
 
-/* Center line and dot */
 .timelineLine {
     position: absolute;
     top: 0;
@@ -137,7 +129,6 @@
     justify-content: center;
 }
 
-/* Responsive: stack vertically, line on left */
 @media (max-width: 900px) {
     .timeline {
         padding: 1.5rem 0;

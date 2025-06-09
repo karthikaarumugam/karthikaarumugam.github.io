@@ -12,8 +12,8 @@ export default function Footer() {
                 <a href={`https://${info.contact.portfolio}`} style={{ color: "#1a237e" }} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaGlobe /></a>
                 <a href={`mailto:${info.contact.email}`} style={{ color: "#ea4335" }} aria-label="Email"><FaEnvelope /></a>
             </div>
-            © {new Date().getFullYear()} {info.hero.name}. All rights reserved.<br />
-            <span>Developed with ❤️ and little help from GitHub Copilot.</span>
+            <span className={styles.footerContent}>© {new Date().getFullYear()} {info.hero.name}. All rights reserved.<br /></span>
+            <span className={styles.footerContent}>Developed with ❤️ and little help from GitHub Copilot.</span>
         </footer>
     );
 }

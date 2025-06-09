@@ -13,8 +13,8 @@ export default function Resume() {
             <main className={resumeStyles.resumeMain}>
                 <div className={resumeStyles.profileCard}>
                     <h1 className={resumeStyles.profileName}>{info.hero.name}</h1>
-                    <h2 className={resumeStyles.profileRole}>{info.hero.title}</h2>
-                    <h3 className={resumeStyles.profileRole}>{info.hero.subtitle}</h3>
+                    <h2 className={resumeStyles.profileRole}>{info.about_me.title}</h2>
+                    <h3 className={resumeStyles.profileRole}>{info.about_me.subtitle}</h3>
                     <div className={resumeStyles.profileContact}>
                         <a href={`https://${info.contact.github}`} style={{ color: "#24292f" }} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a> {info.contact.github}
                         <a href={`https://${info.contact.linkedin}`} style={{ color: "#0077b5" }} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a> {info.contact.linkedin}

@@ -9,14 +9,10 @@ export default function AboutSection() {
     return (
         <section id="about" ref={ref} className={`${styles.section} ${inView ? styles.visible : ""}`}>
             <div className={styles.sectionContent}>
-                {/* <h2>About</h2> */}
-                <h3 className={styles.subtitle}>{info.hero.title}</h3>
-                <h4 className={styles.subtitle}>{info.hero.subtitle}</h4>
                 {info.about_me.summary.map((para: string, idx: number) => (
                     <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
                 ))}
 
-                {/* Background Subsection */}
                 {info.about_me.background && (
                     <div>
                         <h4>Background</h4>
@@ -26,7 +22,6 @@ export default function AboutSection() {
                     </div>
                 )}
 
-                {/* Hobbies Subsection */}
                 {info.about_me.hobbies && (
                     <div>
                         <h4>Hobbies</h4>

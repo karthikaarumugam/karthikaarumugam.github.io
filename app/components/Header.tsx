@@ -52,8 +52,7 @@ export default function Header() {
                 <div className={styles.brandArea}>
                     <div>
                         <h1 className={styles.title}>{info.hero.name}</h1>
-                        {/* <p className={styles.subtitle}>{info.hero.title}</p> */}
-                        {/* <p className={styles.subtitle}>{info.hero.subtitle}</p> */}
+                        <h3 className={styles.subtitle}>{info.hero.title}</h3>
                     </div>
                 </div>
                 <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
@@ -80,14 +79,14 @@ export default function Header() {
                                 </a>
                             </li>
                         ))}
-                        <li key={"toggle"} className={styles.toggle}>
+                        {/* <li key={"toggle"} className={styles.toggle}>
                             <input
                                 type="checkbox"
                                 className={styles.toggleBtn}
                                 onClick={() => setDark(d => !d)}
                                 aria-label="Toggle dark mode"
                             />
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
                 <button
