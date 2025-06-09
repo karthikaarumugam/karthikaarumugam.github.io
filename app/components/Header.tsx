@@ -18,11 +18,11 @@ export default function Header() {
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 1200);
     const pathname = usePathname();
     const router = useRouter();
-    const [dark, setDark] = useState(false);
+    // const [dark, setDark] = useState(false);
 
-    useEffect(() => {
-        document.body.classList.toggle("dark", dark);
-    }, [dark]);
+    // useEffect(() => {
+    //     document.body.classList.toggle("dark", dark);
+    // }, [dark]);
 
     useEffect(() => {
         const handleResize = () => setWindowWidth(window.innerWidth);
