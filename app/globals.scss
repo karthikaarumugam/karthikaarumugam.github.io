@@ -35,8 +35,8 @@
   --color-section-brick: #910c00;
 
   /* Font families */
-  --font-main: 'Roboto', 'Fira Code', 'Fira Mono', 'SF Mono', 'Roboto Mono', monospace;
-  --font-heading: 'Iceberg', 'Montserrat', 'Fira Sans', 'Noto Sans', 'Arial', sans-serif;
+  --font-main: Roboto, "Fira Code", "Fira Sans", monospace;
+  --font-heading: Iceberg, Montserrat, "Fira Sans", "Noto Sans", 'Arial', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

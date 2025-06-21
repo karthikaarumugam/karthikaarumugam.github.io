@@ -57,16 +57,11 @@ export default function Header() {
                 </div>
                 <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
                     <ul>
-                        {navLinks.map((link, idx) => (
-                            <li
-                                key={link.href}
+                        {navLinks.map((link) => (
+                            <li key={link.href}
                                 style={{
-                                    transition: "transform 0.3s cubic-bezier(.4,2,.6,1), opacity 0.3s",
-                                    transform: menuOpen ? "translateY(0)" : "translateY(-10px)",
                                     opacity: menuOpen || windowWidth > 900 ? 1 : 0,
-                                    transitionDelay: menuOpen ? `${idx * 0.06 + 0.1}s` : "0s"
-                                }}
-                            >
+                                }}>
                                 <a
                                     href={link.href}
                                     onClick={e => {
