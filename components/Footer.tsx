@@ -1,6 +1,6 @@
 "use client";
 import styles from "./footer.module.scss";
-import info from "../../_data/info.json";
+import info from "../_data/info.json";
 import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 export default function Footer() {

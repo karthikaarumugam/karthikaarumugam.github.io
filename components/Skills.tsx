@@ -1,9 +1,9 @@
 "use client";
 import { useInView } from "../hooks/useInView";
-import pageStyles from "../page.module.scss";
+import pageStyles from "../styles/index.module.scss";
 import styles from "./skills.module.scss";
-import { skillGroups } from "../../_data/content";
-import softSkills from '../../_data/softSkills.json';
+import { skillGroups } from "../_data/content";
+import softSkills from '../_data/softSkills.json';
 
 const Skills: React.FC = () => {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });

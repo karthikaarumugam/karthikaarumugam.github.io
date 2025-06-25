@@ -1,8 +1,8 @@
 "use client"
 import { useInView } from "../hooks/useInView";
-import styles from "../page.module.scss";
+import styles from "../styles/index.module.scss";
 import projStyles from "./projects.module.scss";
-import projects from '../../_data/projects.json';
+import projects from '../_data/projects.json';
 
 export default function ProjectsSection() {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });

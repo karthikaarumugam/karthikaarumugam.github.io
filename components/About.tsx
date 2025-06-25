@@ -1,7 +1,7 @@
 "use client"
 import { useInView } from "../hooks/useInView";
-import styles from "../page.module.scss";
-import info from '../../_data/info.json';
+import styles from "../styles/index.module.scss";
+import info from '../_data/info.json';
 
 export default function AboutSection() {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });

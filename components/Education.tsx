@@ -1,9 +1,9 @@
 "use client"
 import { useInView } from "../hooks/useInView";
 import Image from "next/image";
-import pageStyles from "../page.module.scss";
+import pageStyles from "../styles/index.module.scss";
 import styles from "./education.module.scss";
-import info from "../../_data/info.json";
+import info from "../_data/info.json";
 
 export default function Education() {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });

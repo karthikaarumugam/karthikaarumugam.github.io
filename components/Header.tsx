@@ -2,7 +2,7 @@
 import styles from "./header.module.scss";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import info from "../../_data/info.json";
+import info from "../_data/info.json";
 
 const navLinks = [
     { label: "About", href: "#about" },

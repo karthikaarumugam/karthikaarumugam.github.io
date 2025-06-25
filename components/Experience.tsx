@@ -1,8 +1,8 @@
 "use client";
 import { useInView } from "../hooks/useInView";
-import pageStyles from "../page.module.scss";
+import pageStyles from "../styles/index.module.scss";
 import styles from "./experience.module.scss";
-import experiences from "../../_data/career.json";// At the top of your file
+import experiences from "../_data/career.json";// At the top of your file
 import dynamic from "next/dynamic";
 const FaBuilding = dynamic(() => import("react-icons/fa").then(mod => mod.FaBuilding), { ssr: false });
 
