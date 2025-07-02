@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "npx serve@latest out",
     "predeploy": "GITHUB_PAGES=true npm run build",
-    "postbuild": "touch out/.nojekyll",
+    "postbuild": "mkdir -p out && touch out/.nojekyll",
     "clean-gh-pages": "gh-pages-clean",
     "deploy": "gh-pages -d out --dotfiles"
   },
