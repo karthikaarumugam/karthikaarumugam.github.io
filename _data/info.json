@@ -121,5 +121,10 @@
     "linkedin": "linkedin.com/in/karthikaa",
     "portfolio": "karthikaarumugam.github.io",
     "github": "github.com/karthikaarumugam"
+  },
+  "resume": {
+    "message": "Download my resume to see how I can help your team achieve its goals. I’m always looking for new challenges and opportunities to make an impact in the tech world.",
+    "download": "Download",
+    "title": "Resume"
   }
 }

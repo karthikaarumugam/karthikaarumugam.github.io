@@ -157,17 +157,6 @@ section {
   border: none;
   transition: background 0.2s, color 0.2s;
 
-  &:nth-child(odd) {
-    color: #fff;
-    border-left: 8px solid var(--color-section-accent);
-  }
-
-  &:nth-child(even) {
-    background: var(--color-section-light);
-    color: var(--color-primary);
-    border-left: 8px solid var(--color-section-brick);
-  }
-
   &:hover {
     border: none;
 
@@ -224,6 +213,10 @@ section {
   .header,
   .footer,
   .printBtn {
+    display: none !important;
+  }
+
+  body:has(.resumeMain)>*:not(.resumeMain) {
     display: none !important;
   }
 }

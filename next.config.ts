@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
     domains: ["media.licdn.com"],
     unoptimized: true,
   },
-  reactStrictMode: true,
 };
 
 export default nextConfig;

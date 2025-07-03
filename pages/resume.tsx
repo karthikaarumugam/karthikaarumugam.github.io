@@ -11,8 +11,19 @@ import info from '../_data/info.json';
 export default function Resume() {
     return (
         <>
-            <Head><title>About - Karthika Arumugam</title></Head>
+            <Head><title>Resume - Karthika Arumugam</title></Head>
             <div className={styles.page}>
+
+                <section className={resumeStyles.header}>
+                    <div className={styles.sectionContent}>
+                        <h2>{info.resume.title}</h2>
+                        <p>{info.resume.message}</p>
+                        <button className={resumeStyles.button} onClick={() => window.print()}>
+                            {info.resume.download} <span className={styles.downloadIcon}>📄</span>
+                        </button>
+                    </div>
+                </section>
+
                 <main className={resumeStyles.resumeMain}>
                     <div className={resumeStyles.profileCard}>
                         <h1 className={resumeStyles.profileName}>{info.hero.name}</h1>
