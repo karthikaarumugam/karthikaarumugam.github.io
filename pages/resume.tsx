@@ -28,7 +28,6 @@ export default function Resume() {
                     <div className={resumeStyles.profileCard}>
                         <h1 className={resumeStyles.profileName}>{info.hero.name}</h1>
                         <h2 className={resumeStyles.profileRole}>{info.about_me.title}</h2>
-                        <h3 className={resumeStyles.profileRole}>{info.about_me.subtitle}</h3>
                         <div className={resumeStyles.profileContact}>
                             <a href={`https://${info.contact.github}`} style={{ color: "#24292f" }} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a> {info.contact.github}
                             <a href={`https://${info.contact.linkedin}`} style={{ color: "#0077b5" }} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a> {info.contact.linkedin}
@@ -40,6 +39,17 @@ export default function Resume() {
                     </div>
                     <aside className={resumeStyles.resumeSidebar}>
                         <div className={resumeStyles.section}>
+                            <h2>Education</h2>
+                            <div className={resumeStyles.educationList}>
+                                {info.education.map((edu, idx) => (
+                                    <div className={resumeStyles.educationCard} key={idx}>
+                                        <strong>{edu.degree}</strong>
+                                        <div>{edu.university}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className={resumeStyles.section}>
                             <h2>Skills</h2>
                             <ul className={resumeStyles.skillsList}>
                                 {skillGroups.flatMap(group =>
@@ -50,23 +60,15 @@ export default function Resume() {
                             </ul>
                         </div>
                         <div className={resumeStyles.section}>
-                            <h2>Soft Skills</h2>
-                            <ul className={resumeStyles.softSkillsList}>
-                                {softSkills.map((skill, idx) => (
-                                    <li key={idx}>{skill}</li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className={resumeStyles.section}>
-                            <h2>Education</h2>
-                            <div className={resumeStyles.educationList}>
-                                {info.education.map((edu, idx) => (
+                            <h2>Certifications</h2>
+                            <ul className={resumeStyles.educationList}>
+                                {info.certifications.slice(0, 4).map((cert, idx) => (
                                     <div className={resumeStyles.educationCard} key={idx}>
-                                        <strong>{edu.degree}</strong>
-                                        <div>{edu.university}</div>
+                                        <strong>{cert.name}</strong>
+                                        <div>{cert.issuer}</div>
                                     </div>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     </aside>
                     <section className={resumeStyles.resumeContent}>
@@ -91,20 +93,14 @@ export default function Resume() {
                                 </div>
                             ))}
                         </div>
-                        {/* <div className={resumeStyles.section}>
-                        <h2>Projects</h2>
-                        <ul className={resumeStyles.projectList}>
-                            {projects.map((proj, idx) => (
-                                <li key={idx}>
-                                    <h3>{proj.title}</h3>
-                                    <p><strong>Context:</strong> {proj.context}</p>
-                                    <p><strong>Why:</strong> {proj.why}</p>
-                                    <p><strong>How:</strong> {proj.how}</p>
-                                    <p><strong>Results:</strong> {proj.results}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div> */}
+                        <div className={resumeStyles.section}>
+                            <h2>Soft Skills</h2>
+                            <ul className={resumeStyles.softSkillsList}>
+                                {softSkills.map((skill, idx) => (
+                                    <li key={idx}>{skill}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </section>
                 </main >
             </div >

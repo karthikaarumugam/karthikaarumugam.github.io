@@ -32,6 +32,10 @@ export default function Education() {
                             </div>
                         </div>
                     ))}
+                </div>
+            </div><div className={pageStyles.sectionContent}>
+                <h2>Certifications</h2>
+                <div className={styles.educationGrid}>
                     {info.certifications.map((cert, idx) => (
                         <div className={styles.educationItem} key={idx}>
                             <div>

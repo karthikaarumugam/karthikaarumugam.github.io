@@ -17,66 +17,57 @@
     "hobbies": "When I’m not wrangling code or leading teams, you’ll probably find me on a <strong>family adventure</strong> (travel bug fully activated), teaching my two little ones the wonders of <strong>STEM</strong> (and how to build a robot out of LEGOs), or hosting friends for impromptu <strong>game nights</strong>. For downtime, I <strong>crochet</strong>, <strong>knit</strong>, and design homemade clothes for my daughter—think <em>“Project Runway: Toddler Edition”</em>. I also love exploring <strong>emerging tech</strong>, contributing to <strong>open-source projects</strong>, and finding new ways to blend <strong>creativity and code</strong>. <strong>Always learning, always building, always up for a challenge</strong>—especially if it involves coffee, cloud, or crafts."
   },
   "education": [{
-      "degree": "M.C.A. (Master of Computer Applications)",
-      "university": "Pondicherry University",
-      "year": "2008 - 2011",
-      "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
-    },
-    {
-      "degree": "B.C.A. (Bachelor of Computer Applications)",
-      "university": "Pondicherry University",
-      "year": "2005 - 2008",
-      "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
-    }
-  ],
+    "degree": "M.C.A. (Master of Computer Applications)",
+    "university": "Pondicherry University",
+    "year": "2008 - 2011",
+    "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
+  }, {
+    "degree": "B.C.A. (Bachelor of Computer Applications)",
+    "university": "Pondicherry University",
+    "year": "2005 - 2008",
+    "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
+  }],
   "certifications": [{
-      "name": "Introduction to Generative AI",
-      "issuer": "Google Cloud Skills Boost",
-      "issueDate": "Mar 2025",
-      "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_100_100/company-logo_100_100/0/1698660876286?e=1753315200&v=beta&t=L4L2MhMEjYEBv2SpIHCOw-_oEKWaEJBQxBEpEL79Ho0"
-    },
-    {
-      "name": "Accelerated Leadership Certification",
-      "issuer": "DePaul University Executive Education",
-      "issueDate": "Dec 2024",
-      "logo": "https://media.licdn.com/dms/image/v2/D560BAQF-fGsux7Irnw/company-logo_100_100/company-logo_100_100/0/1666732239638/depaul_execeducation_logo?e=1753315200&v=beta&t=WQZWYajV-hQ5_K7-lrFkcgbw-R9abB4UBePE6TiveH0"
-    },
-    {
-      "name": "Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3",
-      "issuer": "Microsoft",
-      "issueDate": "Feb 2013",
-      "logo": "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1753315200&v=beta&t=gsO5pHYcC5pDS42cPNa8IPFPhcY9VtHJEqBLUJAo53w",
-      "credentialId": "E172-5907"
-    },
-    {
-      "name": "Certified HTML Developer",
-      "issuer": "W3Schools.com",
-      "issueDate": "Jan 2013",
-      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
-      "credentialId": "4805642"
-    },
-    {
-      "name": "Certified JAVASCRIPT Developer",
-      "issuer": "W3Schools.com",
-      "issueDate": "Jan 2013",
-      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
-      "credentialId": "4709647"
-    },
-    {
-      "name": "Certified JQUERY Developer",
-      "issuer": "W3Schools.com",
-      "issueDate": "Jun 2012",
-      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
-      "credentialId": "3667572"
-    },
-    {
-      "name": "Professional Member",
-      "issuer": "IAAP - International Association of Accessibility Professionals",
-      "issueDate": "Feb 2023",
-      "expiryDate": "Mar 2024",
-      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEF_mhCMtAXIg/company-logo_100_100/company-logo_100_100/0/1735849040473/international_association_of_accessibility_professionals_logo?e=1753315200&v=beta&t=Sc6vCeEm3cP_FdoQd4IXEjkTFFOZg7o8r_1E-bIZ-MM"
-    }
-  ],
+    "name": "Accelerated Leadership Certification",
+    "issuer": "DePaul University Executive Education",
+    "issueDate": "Dec 2024",
+    "logo": "https://media.licdn.com/dms/image/v2/D560BAQF-fGsux7Irnw/company-logo_100_100/company-logo_100_100/0/1666732239638/depaul_execeducation_logo?e=1753315200&v=beta&t=WQZWYajV-hQ5_K7-lrFkcgbw-R9abB4UBePE6TiveH0"
+  }, {
+    "name": "Introduction to Generative AI",
+    "issuer": "Google Cloud Skills Boost",
+    "issueDate": "Mar 2025",
+    "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_100_100/company-logo_100_100/0/1698660876286?e=1753315200&v=beta&t=L4L2MhMEjYEBv2SpIHCOw-_oEKWaEJBQxBEpEL79Ho0"
+  }, {
+    "name": "Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3",
+    "issuer": "Microsoft",
+    "issueDate": "Feb 2013",
+    "logo": "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1753315200&v=beta&t=gsO5pHYcC5pDS42cPNa8IPFPhcY9VtHJEqBLUJAo53w",
+    "credentialId": "E172-5907"
+  }, {
+    "name": "Professional Member",
+    "issuer": "IAAP - International Association of Accessibility Professionals",
+    "issueDate": "Feb 2023",
+    "expiryDate": "Mar 2024",
+    "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEF_mhCMtAXIg/company-logo_100_100/company-logo_100_100/0/1735849040473/international_association_of_accessibility_professionals_logo?e=1753315200&v=beta&t=Sc6vCeEm3cP_FdoQd4IXEjkTFFOZg7o8r_1E-bIZ-MM"
+  }, {
+    "name": "Certified HTML Developer",
+    "issuer": "W3Schools.com",
+    "issueDate": "Jan 2013",
+    "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
+    "credentialId": "4805642"
+  }, {
+    "name": "Certified JavaScript Developer",
+    "issuer": "W3Schools.com",
+    "issueDate": "Jan 2013",
+    "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
+    "credentialId": "4709647"
+  }, {
+    "name": "Certified jQuery Developer",
+    "issuer": "W3Schools.com",
+    "issueDate": "Jun 2012",
+    "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
+    "credentialId": "3667572"
+  }],
   "leadership": {
     "philosophy": "I believe in servant leadership—empowering teams, fostering trust, and enabling growth. My approach is to lead by example, encourage open communication, and celebrate collective wins.",
     "team_successes": [
@@ -85,33 +76,27 @@
       "Orchestrated multi-system integrations across 13+ services, optimizing operations."
     ],
     "testimonials": [{
-        "name": "A. Smith",
-        "feedback": "Karthika’s leadership transformed our engineering culture and delivered results beyond expectations."
-      },
-      {
-        "name": "J. Doe",
-        "feedback": "A true mentor who invests in people and drives technical excellence."
-      }
-    ]
+      "name": "A. Smith",
+      "feedback": "Karthika’s leadership transformed our engineering culture and delivered results beyond expectations."
+    }, {
+      "name": "J. Doe",
+      "feedback": "A true mentor who invests in people and drives technical excellence."
+    }]
   },
   "blog_insights": {
     "articles": [{
-        "title": "Modernizing Legacy Systems: Lessons Learned",
-        "url": "/blog/modernizing-legacy-systems"
-      },
-      {
-        "title": "Building High-Performing Teams in Tech",
-        "url": "/blog/high-performing-teams"
-      },
-      {
-        "title": "Cloud Migration: Pitfalls & Best Practices",
-        "url": "/blog/cloud-migration-best-practices"
-      },
-      {
-        "title": "Leading with Empathy in Engineering",
-        "url": "/blog/leading-with-empathy"
-      }
-    ]
+      "title": "Modernizing Legacy Systems: Lessons Learned",
+      "url": "/blog/modernizing-legacy-systems"
+    }, {
+      "title": "Building High-Performing Teams in Tech",
+      "url": "/blog/high-performing-teams"
+    }, {
+      "title": "Cloud Migration: Pitfalls & Best Practices",
+      "url": "/blog/cloud-migration-best-practices"
+    }, {
+      "title": "Leading with Empathy in Engineering",
+      "url": "/blog/leading-with-empathy"
+    }]
   },
   "contact": {
     "phone": "(309) 531-6743",

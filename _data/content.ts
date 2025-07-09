@@ -2,11 +2,14 @@
 "use client";
 import React from 'react';
 import {
-    FaReact, FaNodeJs, FaAws, FaDocker, FaJenkins, FaGitlab, FaAngular, FaPython,
-    FaDatabase, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaCloud, FaChartBar, FaUsers, FaUniversalAccess, FaLock, FaExchangeAlt, FaEye
+    FaReact, FaNodeJs, FaAws, FaDocker, FaJenkins, FaGitlab, FaAngular, FaPython, FaDatabase, FaHtml5, FaCss3Alt, FaJsSquare,
+    FaGitAlt, FaCloud, FaChartBar, FaUniversalAccess, FaLock, FaExchangeAlt, FaEye, FaPlug,
+    FaCheckCircle
 } from 'react-icons/fa';
 import {
-    SiKubernetes, SiMongodb, SiPostgresql, SiMysql, SiRedis, SiGoogleanalytics, SiSpring, SiNextdotjs, SiAnsible, SiExpress, SiAuth0, SiDatadog, SiSplunk, SiTypescript, SiRedux, SiSass, SiVsco, SiGithubactions
+    SiKubernetes, SiMongodb, SiPostgresql, SiMysql, SiRedis, SiGoogleanalytics, SiSpring, SiNextdotjs, SiAnsible, SiExpress,
+    SiAuth0, SiDatadog, SiSplunk, SiTypescript, SiRedux, SiSass, SiVsco, SiGithubactions, SiFigma, SiApachekafka, SiRundeck,
+    SiAdobe
 } from 'react-icons/si';
 
 export const skillGroups = [
@@ -46,6 +49,10 @@ export const skillGroups = [
             { icon: React.createElement(SiAnsible, { color: "#e00" }), name: 'Ansible' },
             { icon: React.createElement(FaGitAlt, { color: "#f34f29" }), name: 'Git' },
             { icon: React.createElement(SiGithubactions, { color: "#2088ff" }), name: 'GitHub Actions' },
+            { icon: React.createElement(SiRundeck, { color: "#f44336" }), name: 'Rundeck' },
+            { icon: React.createElement(SiApachekafka, { color: "#231f20" }), name: 'Kafka' },
+            { icon: React.createElement(FaPlug, { color: "#007bff" }), name: 'Sockets' },
+
         ],
     },
     {
@@ -57,6 +64,7 @@ export const skillGroups = [
             { icon: React.createElement(SiMysql, { color: "#00758f" }), name: 'MySQL' },
             { icon: React.createElement(SiRedis, { color: "#dc382d" }), name: 'Redis' },
             { icon: React.createElement(SiGoogleanalytics, { color: "#fbbc05" }), name: 'Google Analytics' },
+            { icon: React.createElement(SiAdobe, { color: "#ff0000" }), name: 'Adobe Analytics' },
             { icon: React.createElement(FaChartBar, { color: "#17a2b8" }), name: 'Tag Manager' },
         ],
     },
@@ -69,13 +77,17 @@ export const skillGroups = [
             { icon: React.createElement(SiDatadog, { color: "#632ca6" }), name: 'Datadog' },
             { icon: React.createElement(SiSplunk, { color: "#000" }), name: 'Splunk' },
             { icon: React.createElement(FaExchangeAlt, { color: "#007bff" }), name: 'API & Data Integration' },
+            { icon: React.createElement(FaCloud, { color: "#0078d4" }), name: 'Disaster Recovery' },
+            { icon: React.createElement(FaCheckCircle, { color: "#388e3c" }), name: 'Consent Management' },
         ],
     },
     {
         category: 'Collaboration & Tools',
         skills: [
-            { icon: React.createElement(FaUsers, { color: "#6c757d" }), name: 'Team Management' },
             { icon: React.createElement(SiVsco, { color: "#007acc" }), name: 'VS Code' },
+            { icon: React.createElement(SiFigma, { color: "#a259ff" }), name: 'Figma' },
+            { icon: React.createElement(FaChartBar, { color: "#17a2b8" }), name: 'Lucidchart' },
+            { icon: React.createElement(SiAdobe, { color: "#ff0000" }), name: 'DAM (Adobe, etc.)' },
         ],
     },
 ];

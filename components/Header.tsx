@@ -2,6 +2,7 @@
 import styles from "./header.module.scss";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 import info from "../_data/info.json";
 
 const navLinks = [
@@ -50,6 +51,10 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.headerContent}>
                 <div className={styles.brandArea}>
+                    <Image
+                        src="https://media.licdn.com/dms/image/v2/D5603AQEHt2HS9saSOg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711675972796?e=1757548800&v=beta&t=zkNMUDmCx2FifBZyFib0C9yZoUIMg8wuxuZ91yeUjpE"
+                        alt="Profile Picture" className={styles.profile_pic} width={200} height={200}
+                    />
                     <div>
                         <h1 className={styles.title}>{info.hero.name}</h1>
                         <h3 className={styles.subtitle}>{info.hero.title}</h3>
