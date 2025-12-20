@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
-        let cleanup;
+        let cleanup: void | (() => void);
         import("../components/interaction.js").then((mod) => {
             if (mod && typeof mod.initInteraction === 'function') {
                 cleanup = mod.initInteraction();

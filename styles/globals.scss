@@ -125,13 +125,6 @@ p {
   max-width: 64ch
 }
 
-.hero .tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 8px
-}
-
 .tag {
   background: linear-gradient(180deg, rgba(11, 22, 40, 0.03), rgba(11, 22, 40, 0.02));
   padding: 6px 10px;

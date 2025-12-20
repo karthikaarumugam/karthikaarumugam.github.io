@@ -74,13 +74,6 @@ export default function ProjectsSection() {
                                 {proj.why && <p><strong>Why:</strong> {proj.why}</p>}
                                 {proj.how && <p><strong>How:</strong> {proj.how}</p>}
                                 {proj.results && <p><strong>Results:</strong> {proj.results}</p>}
-                                {proj.tags && (
-                                    <div className={projStyles.tags} aria-hidden={false}>
-                                        {proj.tags.map((t: string) => (
-                                            <span key={t} className={projStyles.tag}>{t}</span>
-                                        ))}
-                                    </div>
-                                )}
                             </div>
                         </div>
                     ))}
