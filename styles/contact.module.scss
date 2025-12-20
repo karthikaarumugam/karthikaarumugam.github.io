@@ -1,7 +1,5 @@
 .contactHeader {
   font-size: 2.2rem;
-  font-family: Iceberg, Montserrat, "Noto Sans", Arial, sans-serif;
-  color: var(--color-primary);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -58,7 +56,6 @@
 
 .contactSubtext {
   font-size: 1rem;
-  color: var(--color-tertiary);
   font-style: italic;
   margin-bottom: 1.2rem;
   display: flex;
@@ -75,7 +72,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  background: var(--color-bg-alt);
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(58, 110, 165, 0.07);
   padding: 2rem 1.5rem;
@@ -95,7 +91,6 @@
   textarea {
     margin-top: 0.3rem;
     padding: 0.7rem 1rem;
-    border: 1px solid var(--color-accent);
     border-radius: 6px;
     font-size: 1rem;
     font-family: inherit;
@@ -105,8 +100,6 @@
 
     &:focus {
       outline: none;
-      border-color: var(--color-primary);
-      background: var(--color-link-hover);
     }
   }
 
@@ -118,8 +111,6 @@
   button[type="submit"] {
     margin-top: 0.5rem;
     padding: 0.8rem 1.5rem;
-    background: var(--color-primary);
-    color: #fff;
     border: none;
     border-radius: 6px;
     font-size: 1.08rem;
@@ -129,7 +120,6 @@
 
     &:hover,
     &:focus {
-      background: var(--color-secondary);
       transform: translateY(-2px) scale(1.03);
     }
   }

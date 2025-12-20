@@ -1,36 +1,35 @@
 .skillsGroup {
-    font-family: "Fira Code", "Fira Sans", 'Consolas', monospace;
-    font-variant-ligatures: none;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
+    font-family: var(--font-ui);
+    margin-bottom: .5rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 10px 20px;
+    align-items: start;
 
     h3 {
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         font-weight: 700;
-        color: var(--color-primary);
-        padding-top: 0.3rem;
-        flex-shrink: 0;
-        width: 20%;
+        color: var(--color-heading);
+        padding-top: 4px;
     }
 
     .skillsList {
         flex: 1;
         display: flex;
         flex-wrap: wrap;
-        gap: .5rem 1rem;
+        gap: 0 .5rem;
 
         .skillItem {
             display: flex;
+            flex-direction: column;
             align-items: center;
             background: none;
             border-radius: 8px;
-            padding: 0.5rem;
-            min-width: 0;
             margin-bottom: 0.5rem;
             position: relative;
             transition: box-shadow 0.2s, background 0.2s;
+            width: 3rem;
 
             &:hover,
             &:focus-within {
@@ -44,11 +43,11 @@
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
-                max-width: 5rem;
+                width: 100%;
             }
 
             .skillName {
-                display: block;
+                visibility: hidden;
                 opacity: 1;
                 position: static;
                 background: none;
@@ -63,10 +62,14 @@
                 z-index: 10;
                 margin-top: 0.2rem;
                 text-align: center;
+                width: 100%;
+                word-break: break-word;
+                overflow-wrap: break-word;
             }
 
             &:hover .skillName,
             &:focus-within .skillName {
+                visibility: visible;
                 font-weight: 700;
             }
         }

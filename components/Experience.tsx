@@ -1,56 +1,83 @@
 "use client";
+import React, { useState, Suspense } from "react";
 import { useInView } from "../hooks/useInView";
 import pageStyles from "../styles/index.module.scss";
 import styles from "./experience.module.scss";
-import experiences from "../_data/career.json";// At the top of your file
-import dynamic from "next/dynamic";
-const FaBuilding = dynamic(() => import("react-icons/fa").then(mod => mod.FaBuilding), { ssr: false });
+import experiences from "../_data/career.json";
+
+const LazyDetails = React.lazy(() => import("./ExperienceDetails"));
 
 export default function ExperienceSection() {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });
+    const [selected, setSelected] = useState<number | null>(null);
+
+    const toggle = (i: number) => {
+        setSelected((prev) => (prev === i ? null : i));
+    };
+
+    const onKeyDown = (e: React.KeyboardEvent, i: number) => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggle(i);
+        }
+    };
 
     return (
         <section id="experience" ref={ref} className={`${pageStyles.section} ${inView ? styles.visible : ""}`}>
             <div className={pageStyles.sectionContent}>
                 <h2>Experience</h2>
-                <div className={styles.timeline}>
-                    <div className={styles.timelineLine} />
-                    <div className={styles.timelineList}>
-                        {experiences.map((exp, idx) => (
-                            <div className={styles.timelineItem} key={idx}>
-                                <div className={styles.timelineDot} ><FaBuilding size={20} color="var(--color-primary)" /></div>
-                                <div className={styles.timelineSide}>
-                                    <div className={styles.experienceHeader}>
-                                        {/* {exp.logo && (<img src={exp.logo} alt={`${exp.company} logo`} className={styles.companyLogo} width={40} height={40} loading="lazy" />)} */}
-                                        <div>
-                                            <h3>
-                                                {exp.role} <span>@ {exp.company}</span>{" "}
-                                                {exp.client && (
-                                                    <span className={styles.clientCompany}>
-                                                        Client: {exp.client}
-                                                    </span>
-                                                )}
-                                            </h3>
-                                            <p className={styles.period}>{exp.period}</p>
-                                        </div>
 
-                                        {exp.shortDescription && (
-                                            <p className={styles.shortDescription}>{exp.shortDescription}</p>
-                                        )}
+                <div className={styles.pills} role="tablist" aria-label="Experience roles">
+                    {experiences.map((exp, idx) => {
+                        const isSelected = selected === idx;
+                        return (
+                            <div key={idx} className={styles.pillRow}>
+                                <button
+                                    id={`exp-pill-${idx}`}
+                                    className={`${styles.pill} ${isSelected ? styles.pillActive : ""}`}
+                                    onClick={() => toggle(idx)}
+                                    onKeyDown={(e) => onKeyDown(e, idx)}
+                                    aria-expanded={isSelected}
+                                    aria-controls={`exp-details-${idx}`}
+                                >
+                                    <div className={styles.pillRole}>
+                                        {/* {exp.logo && (
+                                            <Image src={exp.logo} alt={`${exp.company} logo`} className={styles.companyLogo} width={48} height={48} loading="lazy" />
+                                        )} */}
+                                        {exp.role} | <strong>{exp.company}</strong>
+                                        {exp.client && <span className={styles.clientCompany}> • Client: {exp.client}</span>}
                                     </div>
-                                </div>
-                                <div className={styles.timelineSide}>
-                                    <div className={styles.experienceDetails}>
-                                        <ul>
-                                            {exp.responsibilities.map((desc, i) => (
-                                                <li key={i} dangerouslySetInnerHTML={{ __html: desc }} />
-                                            ))}
-                                        </ul>
-                                    </div>
+                                    {exp.period && <div className={styles.period}>{exp.period}</div>}
+                                    {exp.shortDescription && <div className={styles.pillDesc}>{exp.shortDescription}</div>}
+                                </button>
+
+                                {/* Inline accordion detail under the pill */}
+                                <div
+                                    id={`exp-details-${idx}`}
+                                    role="region"
+                                    aria-labelledby={`exp-pill-${idx}`}
+                                    className={`${styles.accordion} ${isSelected ? styles.accordionOpen : ""}`}
+                                    aria-hidden={!isSelected}
+                                >
+                                    {isSelected && (
+                                        <Suspense fallback={<div className={styles.loading}>Loading details…</div>}>
+                                            <LazyDetails
+                                                id={`exp-details-${idx}`}
+                                                labelledBy={`exp-pill-${idx}`}
+                                                onClose={() => {
+                                                    // close and return focus to the originating pill
+                                                    setSelected(null);
+                                                    const btn = document.getElementById(`exp-pill-${idx}`) as HTMLButtonElement | null;
+                                                    if (btn) btn.focus();
+                                                }}
+                                                exp={experiences[idx]}
+                                            />
+                                        </Suspense>
+                                    )}
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

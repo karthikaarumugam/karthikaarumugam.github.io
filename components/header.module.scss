@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.7rem;
+    gap: 5rem;
     flex: 1 1 auto;
     min-width: 0;
 
@@ -21,12 +21,11 @@
     }
 
     .profile_pic {
-        max-width: 200px;
-        height: 20%;
-        width: 20%;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
         border-radius: 50%;
         object-fit: cover;
-        border-radius: 50%;
     }
 
     h1 {

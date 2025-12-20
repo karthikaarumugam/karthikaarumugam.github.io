@@ -4,6 +4,7 @@ import Image from "next/image";
 import pageStyles from "../styles/index.module.scss";
 import styles from "./education.module.scss";
 import info from "../_data/info.json";
+import { FaExternalLinkAlt } from "react-icons/fa"; // Import FaExternalLinkAlt
 
 export default function Education() {
     const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 });
@@ -42,6 +43,18 @@ export default function Education() {
                                 <div className={styles.degree}>{cert.name}</div>
                                 <div className={styles.school}>{cert.issuer}</div>
                                 <div className={styles.year}>{cert.issueDate}</div>
+                                {cert.credential && (
+                                <a href={cert.credential} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
+                                    <FaExternalLinkAlt />
+                                </a>
+                                )}
+                                {/* {cert.skills && (
+                                    <div className={styles.skills} aria-hidden={false}>
+                                        {cert.skills.map((t) => (
+                                            <span key={t} className={styles.skillsBadge}>{t}</span>
+                                        ))}
+                                    </div>
+                                )} */}
                                 {cert.logo && (
                                     <Image
                                         src={cert.logo}

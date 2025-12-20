@@ -1,20 +1,22 @@
 {
   "hero": {
     "name": "Karthika Arumugam",
-    "title": "Engineering Leader | Driving digital transformation with precision and passion"
+    "title": "Senior Product Engineering Leader",
+    "subTitle": "AI‑powered digital transformation | Driving digital transformation with precision and passion"
   },
   "about_me": {
     "resumeSummary": "With <strong>13 years of experience</strong> in software development and leadership, I’ve led teams to <strong>modernize legacy systems</strong>, <strong>scale enterprise applications</strong>, and align <strong>technology strategy</strong> with business goals. My expertise spans <strong>cloud-native architectures, DevOps, Agile development, system architecture, API integrations, CI/CD automation</strong>, and <strong>cloud migrations</strong>. I’ve delivered <strong>high-impact solutions</strong> across hospitality, travel, and enterprise tech, always focused on <strong>operational efficiency, security compliance</strong>, and <strong>enhancing user experiences</strong>.",
     "title": "Engineering Leader | Building Scalable Solutions & Empowering Teams",
     "subtitle": "Driving digital transformation, technical excellence, and inclusive growth.",
     "summary": [
-      "<strong>Hi, I’m <em>Karthika Arumugam</em>, Product Engineering Manager at Hyatt</strong>, where I get to blend my love for <strong>AI</strong>, cloud wizardry, and building <strong>secure, scalable systems</strong> that make digital transformation more than just a buzzword. With <strong>13 years in software development and leadership</strong>, I’ve helped teams turn legacy spaghetti code into modern, cloud-native masterpieces and aligned tech strategy with <em>actual business needs</em> (not just the latest shiny tool)."
+      "I am a <strong>Product Engineering Manager</strong> with over 13 years of experience in leading high-stakes digital transformations. My career has been defined by a simple goal: making technology work better for the people who use it. Whether I am architecting global cloud systems at Hyatt or guiding a team through a complex technical migration, I focus on building software that is scalable, secure, and genuinely aligned with business needs."
     ],
     "background": [
-      "I geek out over <strong>cloud architectures</strong>, <strong>DevOps</strong>, <strong>Agile everything</strong>, <strong>system design</strong>, <strong>API integrations</strong>, <strong>CI/CD automation</strong>, and <strong>cloud migrations</strong>—basically, if it makes systems run <strong>smoother, faster, and safer</strong>, I’m in. My favorite wins? <strong>Delivering high-impact solutions</strong> that boost efficiency, nail <strong>security compliance</strong>, and make users (and stakeholders) smile across hospitality, travel, and enterprise tech.",
-      "But let’s talk people: I’m passionate about <strong>mentoring engineers</strong>, streamlining processes, and building teams where <strong>innovation and collaboration</strong> are the norm (not just something we put on a slide deck). I believe <strong>empowered, diverse teams</strong> are unstoppable, and I’m all about creating a culture where <strong>continuous improvement</strong> isn’t just encouraged—it’s <em>celebrated</em>."
+      "My leadership style is rooted in <strong>technical excellence and strategic foresight</strong>. I specialize in taking legacy complexity—what many call \"spaghetti code\"—and modernizing it into clean, cloud-native architectures. Recently, I have focused on Generative AI adoption, exploring how these tools can meaningfully streamline developer workflows and create smarter, more intuitive guest experiences without sacrificing security or stability.",
+      "Beyond the technical roadmaps, I am a dedicated mentor. I believe that the strongest products are built by teams that feel empowered and psychologically safe. I focus on creating inclusive engineering cultures where innovation isn't just encouraged, but a natural part of the daily routine."
+
     ],
-    "hobbies": "When I’m not wrangling code or leading teams, you’ll probably find me on a <strong>family adventure</strong> (travel bug fully activated), teaching my two little ones the wonders of <strong>STEM</strong> (and how to build a robot out of LEGOs), or hosting friends for impromptu <strong>game nights</strong>. For downtime, I <strong>crochet</strong>, <strong>knit</strong>, and design homemade clothes for my daughter—think <em>“Project Runway: Toddler Edition”</em>. I also love exploring <strong>emerging tech</strong>, contributing to <strong>open-source projects</strong>, and finding new ways to blend <strong>creativity and code</strong>. <strong>Always learning, always building, always up for a challenge</strong>—especially if it involves coffee, cloud, or crafts."
+    "hobbies": "When I’ m not leading technical roadmaps or geeking out over technologies, I’ m focused on my most important role: being <strong>a mom of two.</strong> <br>Parenthood has genuinely made me a stronger leader.It has refined my ability to prioritize under pressure, lead with deep empathy, and stay calm during \"system outages\"— whether they happen in a codebase or at the dinner table.You’ ll often find us on family adventures, building STEM - focused LEGO robots, or in the middle of a <strong>\"Project Runway: Toddler Edition\"</strong> session where I put my crochet and knitting skills to use. <br>I am always learning, always building, and always ready for a new challenge— especially if it involves coffee, the cloud, or a creative DIY project."
   },
   "education": [{
     "degree": "M.C.A. (Master of Computer Applications)",
@@ -31,42 +33,30 @@
     "name": "Accelerated Leadership Certification",
     "issuer": "DePaul University Executive Education",
     "issueDate": "Dec 2024",
-    "logo": "https://media.licdn.com/dms/image/v2/D560BAQF-fGsux7Irnw/company-logo_100_100/company-logo_100_100/0/1666732239638/depaul_execeducation_logo?e=1753315200&v=beta&t=WQZWYajV-hQ5_K7-lrFkcgbw-R9abB4UBePE6TiveH0"
+    "logo": "https://images.credly.com/size/680x680/images/92863a15-3f78-436c-9d03-3793691fc40e/blob",
+    "credential": "https://www.credly.com/badges/26811054-54d7-4a45-a99c-7fb01e561e70/",
+    "skills": ["Communication skills", "Influencing Skills", "Leadership", "Personal Efficiency", "Strategic Thinking", "Team Management"]
   }, {
     "name": "Introduction to Generative AI",
     "issuer": "Google Cloud Skills Boost",
     "issueDate": "Mar 2025",
-    "logo": "https://media.licdn.com/dms/image/v2/D560BAQFV-ds_iFfVSQ/company-logo_100_100/company-logo_100_100/0/1698660876286?e=1753315200&v=beta&t=L4L2MhMEjYEBv2SpIHCOw-_oEKWaEJBQxBEpEL79Ho0"
+    "logo": "https://cdn.qwiklabs.com/dkQVGBYS8HvCJHFPxPExnP3JVKTEoe6CpEKnTq8o2fo%3D",
+    "skills": ["Generative AI", "Machine Learning", "AI Models", "AI Applications"]
   }, {
     "name": "Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3",
     "issuer": "Microsoft",
     "issueDate": "Feb 2013",
-    "logo": "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1753315200&v=beta&t=gsO5pHYcC5pDS42cPNa8IPFPhcY9VtHJEqBLUJAo53w",
-    "credentialId": "E172-5907"
+    "logo": "https://images.credly.com/size/680x680/images/84f513e4-256d-4aa0-a29d-973bcb39d87a/Programming_in_HTML5_with_JavaScript_and_Css3-01.png",
+    "credential": "https://www.credly.com/badges/34d3e0ad-e143-4df4-b736-4899c6bdbdaf",
+    "skills": ["Application Developer", "CSS3", "Data Security", "Data Validation", "HTML5", "JavaScript", "Object-based Programming", "Visual Studio", "Web Applications", "Web Developer"]
   }, {
     "name": "Professional Member",
     "issuer": "IAAP - International Association of Accessibility Professionals",
     "issueDate": "Feb 2023",
     "expiryDate": "Mar 2024",
-    "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEF_mhCMtAXIg/company-logo_100_100/company-logo_100_100/0/1735849040473/international_association_of_accessibility_professionals_logo?e=1753315200&v=beta&t=Sc6vCeEm3cP_FdoQd4IXEjkTFFOZg7o8r_1E-bIZ-MM"
-  }, {
-    "name": "Certified HTML Developer",
-    "issuer": "W3Schools.com",
-    "issueDate": "Jan 2013",
-    "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
-    "credentialId": "4805642"
-  }, {
-    "name": "Certified JavaScript Developer",
-    "issuer": "W3Schools.com",
-    "issueDate": "Jan 2013",
-    "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
-    "credentialId": "4709647"
-  }, {
-    "name": "Certified jQuery Developer",
-    "issuer": "W3Schools.com",
-    "issueDate": "Jun 2012",
-    "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEKiW5_y2z8Pw/company-logo_100_100/company-logo_100_100/0/1730289620977/w3schoolscom_logo?e=1753315200&v=beta&t=CUZPXXzJIENejnfruoimjE3CbFtY6T1Im0Jk7a2SB14",
-    "credentialId": "3667572"
+    "logo": "https://images.credly.com/size/680x680/images/18ec1f34-c540-4da3-b2c2-10112f917b12/blob",
+    "credential": "https://www.credly.com/badges/c348df68-72b9-4a0d-9831-e0e02ba83657",
+    "skills": ["Accessibility Champion", "Advanced Networking", "Advocacy", "Diversity", "Inclusion"]
   }],
   "leadership": {
     "philosophy": "I believe in servant leadership—empowering teams, fostering trust, and enabling growth. My approach is to lead by example, encourage open communication, and celebrate collective wins.",

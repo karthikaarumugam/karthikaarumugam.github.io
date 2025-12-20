@@ -1,58 +1,73 @@
-[
-  {
-    "title": "Legacy System Modernization",
-    "context": "Migrated legacy hospitality systems from Node.js to React/Next.js.",
-    "why": "To boost scalability, maintainability, and user experience.",
-    "how": "Led cross-functional teams through seamless transitions, adopting modern frameworks and best practices.",
-    "results": "Enhanced performance, accelerated feature delivery, and improved customer satisfaction."
+[{
+    "title": "Enterprise AI Strategy & Governance",
+    "context": "Led strategic AI adoption and enterprise-wide governance initiatives.",
+    "why": "To establish scalable, business-aligned AI implementation strategies.",
+    "how": "Evaluated pilot programs, synthesized cross-functional feedback, organized internal hackathons, and informed executive roadmaps.",
+    "results": "Unified multi-disciplinary teams on AI implementation strategies and aligned varying skill levels.",
+    "keywords": ["AI/ML", "Strategy", "Governance", "Leadership", "Cross-functional"]
   },
   {
-    "title": "Cloud Migration & API Integrations",
-    "context": "Directed Opera V5 to OHIP cloud migration.",
-    "why": "To enable robust API integrations and real-time data exchange across platforms.",
-    "how": "Orchestrated API-first architecture and cloud adoption.",
-    "results": "Improved system reliability and positioned operations for future technology adoption."
+    "title": "Cloud-Native Architecture & Microservices",
+    "context": "Orchestrated legacy system modernization to cloud-native architectures, designing unified microservice integration layers.",
+    "why": "To improve global scalability, system performance, and consolidate fragmented architectures.",
+    "how": "Architected microservice layer integrating Opera v5, Opera Cloud (OHIP), and loyalty platforms using React, Next.js, Node.js, Python, Kafka, and Snowflake.",
+    "results": "Significantly improved global scalability, reliability, and consolidated fragmented systems into cohesive platform.",
+    "keywords": ["Cloud Architecture", "Microservices", "API Design", "System Integration", "React", "Next.js", "Node.js", "Python"]
   },
   {
-    "title": "Enterprise Monitoring Transformation",
-    "context": "Migrated from Splunk to Datadog for enterprise-wide monitoring.",
-    "why": "To empower teams with real-time insights and reduce incident response times.",
-    "how": "Developed dashboards and automated alerts for actionable insights.",
-    "results": "Reduced incident response times by 30%."
+    "title": "Event-Driven Systems & Real-Time Data Infrastructure",
+    "context": "Architected event-driven systems with Kafka and implemented comprehensive monitoring via Datadog.",
+    "why": "To reduce data latency, accelerate incident detection, and enable real-time synchronization.",
+    "how": "Implemented Kafka-based event streaming, SLOs, automated alerting, and global monitoring infrastructure.",
+    "results": "Reduced data latency across worldwide operations and incident response times by 30%.",
+    "keywords": ["Kafka", "Event Streaming", "Datadog", "Monitoring", "SLO", "Real-time Systems"]
   },
   {
-    "title": "Operational Workflow Automation",
-    "context": "Built host-facing dashboards to automate operational workflows.",
+    "title": "Data Analytics & Predictive Systems",
+    "context": "Pioneered analytics pipelines and built data infrastructure for predictive modeling.",
+    "why": "To enable data-driven service optimization and predictive recommendations.",
+    "how": "Leveraged Python and Snowflake to build advanced analytics and predictive modeling pipelines.",
+    "results": "Enabled dynamic service recommendations and personalized guest experiences.",
+    "keywords": ["Python", "Snowflake", "Analytics", "Predictive Modeling", "Data Pipeline", "BI"]
+  },
+  {
+    "title": "Security, Compliance & Cloud Migration",
+    "context": "Enforced secure-by-design standards (PCI, PII, WCAG) and directed cloud migration initiatives.",
+    "why": "To strengthen security posture, ensure regulatory compliance, and reduce attack surface.",
+    "how": "Migrated critical integrations to serverless environments, implemented strict compliance checks, and orchestrated API-first cloud adoption.",
+    "results": "Improved security posture, ensured compliance, reduced attack surface, and improved system reliability.",
+    "keywords": ["Security", "Compliance", "PCI", "Cloud Migration", "Serverless", "API-First"]
+  },
+  {
+    "title": "CI/CD, DevOps & Platform Engineering",
+    "context": "Optimized deployment pipelines and migrated from legacy tools (Bitbucket/Jenkins/Splunk) to modern platforms (GitLab/Datadog).",
+    "why": "To automate deployments, improve release reliability, and accelerate deployment cycles.",
+    "how": "Developed dashboards, automated alerts, optimized CI/CD pipelines, and established SLO-driven monitoring.",
+    "results": "Accelerated deployment cycles, increased engineering productivity, and reduced incident response times.",
+    "keywords": ["CI/CD", "GitLab", "DevOps", "Automation", "Pipeline Optimization", "Infrastructure"]
+  },
+  {
+    "title": "Frontend Modernization & UX Optimization",
+    "context": "Redesigned multiple web platforms and modernized legacy systems with modern frontend frameworks.",
+    "why": "To improve performance, user experience, scalability, and maintainability.",
+    "how": "Migrated from legacy Node.js/IBM Portal to React/Next.js/Angular SPA with integrated analytics and automated testing.",
+    "results": "Enhanced performance, accelerated feature delivery, improved customer satisfaction, and reduced regression testing by 40%.",
+    "keywords": ["React", "Angular", "Next.js", "SPA", "Frontend", "UX/UI", "Performance Optimization"]
+  },
+  {
+    "title": "Operational Automation & Dashboard Development",
+    "context": "Built host-facing dashboards and automated operational workflows for hospitality operations.",
     "why": "To streamline pre-arrival, group, and F&B processes and reduce manual workload.",
-    "how": "Developed custom dashboards and automated key operational tasks.",
-    "results": "Reduced manual workload by 20% and elevated guest service efficiency."
+    "how": "Developed custom dashboards and automated key operational tasks across guest services.",
+    "results": "Reduced manual workload by 20% and elevated guest service efficiency.",
+    "keywords": ["Dashboard Development", "Process Automation", "Workflow Optimization", "Hospitality Tech"]
   },
   {
-    "title": "Security & Compliance Enhancement",
-    "context": "Integrated Azure AD MFA and enforced PCI/PII standards across applications.",
-    "why": "To strengthen enterprise security posture and ensure regulatory alignment.",
-    "how": "Implemented secure authentication and compliance checks.",
-    "results": "Improved security and ensured compliance with industry standards."
-  },
-  {
-    "title": "CI/CD Pipeline Optimization",
-    "context": "Migrated from Bitbucket/Jenkins to GitLab for CI/CD.",
-    "why": "To automate deployments and improve release reliability.",
-    "how": "Optimized pipelines and automated deployment processes.",
-    "results": "Accelerated deployment cycles and increased engineering productivity."
-  },
-  {
-    "title": "Global Brand Launches & Migrations",
-    "context": "Launched new digital brands and managed large-scale multilingual website migrations for Hasbro.",
-    "why": "To improve global reach, accessibility, and SEO compliance.",
-    "how": "Oversaw multilingual content deployment and ensured accessibility standards.",
-    "results": "Improved digital asset performance and global reach."
-  },
-  {
-    "title": "Web Platform Redesign",
-    "context": "Redesigned Tracfone’s web platforms from IBM Portal to Angular SPA.",
-    "why": "To improve site performance, user experience, and engagement.",
-    "how": "Integrated analytics and automated testing pipelines.",
-    "results": "Improved site performance, user experience, and reduced regression testing time by 40%."
+    "title": "Global Digital Transformation & Localization",
+    "context": "Launched new digital brands and managed large-scale multilingual website migrations for global enterprises.",
+    "why": "To improve global reach, accessibility, SEO compliance, and user engagement.",
+    "how": "Oversaw multilingual content deployment, ensured WCAG accessibility standards, integrated analytics, and optimized performance.",
+    "results": "Improved digital asset performance, global reach, user engagement, and site performance.",
+    "keywords": ["Localization", "Accessibility", "SEO", "Global Scaling", "Multilingual", "Enterprise"]
   }
 ]

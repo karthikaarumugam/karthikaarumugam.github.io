@@ -1,173 +1,204 @@
+/* Pills-style experience list */
+.intro {
+    color: var(--color-secondary);
+    margin-bottom: 18px;
+}
+
+.pills {
+    display: flex;
+    flex-direction: column;
+    /* one pill per row */
+    gap: 12px;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.pill {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* main content + period badge */
+    gap: 12px;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: var(--color-card);
+    border: 1px solid rgba(11, 22, 40, 0.04);
+    width: 100%;
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    text-align: left;
+    white-space: nowrap;
+    /* prevent wrapping */
+    overflow: hidden;
+    /* keep single-line truncation */
+}
+
+.pill:focus {
+    outline: 3px solid rgba(15, 98, 254, 0.12);
+    outline-offset: 3px;
+}
+
+.pill:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+.pillActive {
+    background: linear-gradient(180deg, rgba(15, 98, 254, 0.06), rgba(15, 98, 254, 0.02));
+    border-color: rgba(15, 98, 254, 0.16);
+    box-shadow: 0 12px 40px rgba(15, 98, 254, 0.06);
+}
+
+.pillRole {
+    font-weight: 600;
+    color: var(--color-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pillDesc {
+    color: var(--color-text);
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-column: 1 / 2;
+    /* ensure desc sits under role in same column */
+}
+
+.period {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--color-secondary);
+    background: rgba(11, 22, 40, 0.03);
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(11, 22, 40, 0.04);
+    align-self: center;
+    white-space: nowrap;
+}
+
+.detailsWrap {
+    margin-top: 12px;
+}
+
+/* Accordion container that expands inline under each pill */
+.pillRow {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.accordion {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 220ms ease, opacity 200ms ease, padding 200ms ease;
+    padding: 0 0;
+}
+
+.accordionOpen {
+    max-height: 1200px;
+    /* large enough to accommodate expanded content */
+    opacity: 1;
+    padding: 6px 0 12px 0;
+}
+
+.detailsPanel {
+    background: var(--color-card);
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid rgba(11, 22, 40, 0.04);
+    box-shadow: 0 8px 32px rgba(2, 6, 23, 0.04);
+}
+
+.detailsHeader {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.companyLogo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid var(--color-border);
+}
+
+.companyLine {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    color: var(--color-secondary);
+}
+
+.tools {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.toolBadge {
+    background: rgba(11, 22, 40, 0.03);
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.responsibilities {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style: disc;
+}
+
+.closeBtn {
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.loading {
+    color: var(--color-secondary);
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+/* preserve existing responsive rules */
+@media (max-width: 900px) {
+    .pills {
+        flex-direction: column;
+        gap: 10px
+    }
+
+    .pill {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* keep timeline styles as fallback (if ever used) */
 .timelineItem {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     margin-bottom: 2rem;
-    min-height: 180px;
-
-    ul {
-        margin: 0.5rem 0 0 1.2rem;
-        padding: 0;
-        list-style: none;
-
-        li {
-            color: var(--color-text);
-        }
-    }
-
-    &:nth-child(odd) {
-        flex-direction: row;
-
-        h3,
-        .experience_companyLogo,
-        p {
-            text-align: right;
-        }
-    }
-
-    &:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-
-    .timelineSide {
-        width: 50%;
-        display: flex;
-        align-items: flex-start;
-        position: relative;
-        z-index: 2;
-        margin: 0 1.5rem;
-        justify-content: flex-end;
-    }
-
-    .experienceHeader {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
-        background: none;
-        border: none;
-        box-shadow: none;
-        padding: 0;
-        min-width: 180px;
-        width: 100%;
-
-        h3 {
-            color: var(--color-heading);
-
-            span {
-                display: block;
-                color: var(--color-primary);
-                font-weight: 500;
-                font-size: small;
-            }
-        }
-    }
-
-    .companyLogo {
-        width: 40px;
-        height: 40px;
-        border-radius: 6px;
-        object-fit: contain;
-        background: #fff;
-        border: 1px solid var(--color-border);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-
-    .clientCompany {
-        color: var(--color-secondary);
-    }
-
-    .period {
-        color: var(--color-secondary);
-    }
-
-    .experienceDetails {
-        background: var(--color-card);
-        border-radius: 8px;
-        box-shadow: 0 4px 24px -8px #020c1bb3;
-        position: relative;
-        transition: box-shadow 0.2s;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        .timelineItem:hover & {
-            box-shadow: 0 8px 32px -8px var(--color-primary);
-        }
-    }
-
-    .shortDescription {
-        color: var(--color-text);
-    }
-}
-
-.timelineLine {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background: var(--color-accent);
-    opacity: 0.5;
-    transform: translateX(-50%);
-    z-index: 0;
-}
-
-.timelineDot {
-    position: absolute;
-    top: 2.2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 24px;
-    height: 24px;
-    background: none;
-    border-radius: 50%;
-    border: none;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 900px) {
-    .timeline {
-        padding: 1.5rem 0;
-    }
-
-    .timelineLine {
-        left: 24px;
-        transform: none;
-    }
-
-    .timelineItem {
-        flex-direction: column !important;
-        margin-bottom: 0;
-        min-height: unset;
-    }
-
-    .timelineItem .timelineSide {
-        width: auto;
-        justify-content: flex-start;
-
-        h3,
-        p {
-            text-align: start !important;
-            margin: .5rem auto;
-        }
-    }
-
-    .timelineItem .experienceHeader,
-    .timelineItem .experienceDetails {
-        min-width: 0;
-        max-width: 100%;
-        align-items: flex-start !important;
-        border: none;
-        box-shadow: none;
-    }
-
-    .timelineDot {
-        left: 0;
-        transform: none;
-        top: 2.2rem;
-    }
 }
