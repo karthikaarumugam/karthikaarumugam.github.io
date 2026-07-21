@@ -18,7 +18,7 @@
     grid-template-columns: 1fr auto;
     /* main content + period badge */
     gap: 12px;
-    align-items: center;
+    align-items: start;
     padding: 12px 16px;
     border-radius: 12px;
     background: var(--color-card);
@@ -27,10 +27,7 @@
     cursor: pointer;
     transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
     text-align: left;
-    white-space: nowrap;
-    /* prevent wrapping */
     overflow: hidden;
-    /* keep single-line truncation */
 }
 
 .pill:focus {
@@ -49,22 +46,46 @@
     box-shadow: 0 12px 40px rgba(15, 98, 254, 0.06);
 }
 
+.pillContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
 .pillRole {
     font-weight: 600;
     color: var(--color-heading);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    align-items: baseline;
+}
+
+.pillTitle {
+    font-weight: 700;
+}
+
+.pillCompany {
+    color: var(--color-secondary);
 }
 
 .pillDesc {
     color: var(--color-text);
-    font-size: 13px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    grid-column: 1 / 2;
-    /* ensure desc sits under role in same column */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.scopeBadge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: rgba(15, 98, 254, 0.08);
+    padding: 4px 8px;
+    border-radius: 999px;
 }
 
 .period {
@@ -150,10 +171,43 @@
     font-size: 13px;
 }
 
+.scopeText {
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+}
+
+.detailsPanel,
+.detailsPanel * {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.keyWinsTitle {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-heading);
+}
+
 .responsibilities {
     margin: 0;
-    padding-left: 1.2rem;
-    list-style: disc;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.responsibilityItem {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+}
+
+.bulletIcon {
+    color: var(--color-secondary);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .closeBtn {

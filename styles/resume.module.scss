@@ -206,7 +206,9 @@
 }
 
 @media print {
-    .header {
-        display: none;
+
+    .header,
+    .button {
+        display: none !important;
     }
 }

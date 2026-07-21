@@ -40,15 +40,17 @@ export default function ExperienceSection() {
                                     aria-expanded={isSelected}
                                     aria-controls={`exp-details-${idx}`}
                                 >
-                                    <div className={styles.pillRole}>
-                                        {/* {exp.logo && (
-                                            <Image src={exp.logo} alt={`${exp.company} logo`} className={styles.companyLogo} width={48} height={48} loading="lazy" />
-                                        )} */}
-                                        {exp.role} | <strong>{exp.company}</strong>
-                                        {exp.client && <span className={styles.clientCompany}> • Client: {exp.client}</span>}
+                                    <div className={styles.pillContent}>
+                                        <div className={styles.pillRole}>
+                                            <span className={styles.pillTitle}>{exp.role}</span>
+                                            <span className={styles.pillCompany}> | {exp.company}</span>
+                                            {exp.client && <span className={styles.clientCompany}> • Client: {exp.client}</span>}
+                                        </div>
+                                        {exp.scope && <div className={styles.scopeBadge}>{exp.scope}</div>}
+                                        {exp.period && <div className={styles.period}>{exp.period}</div>}
+                                        {exp.shortDescription && <div className={styles.pillDesc}>{exp.shortDescription}</div>}
                                     </div>
                                     {exp.period && <div className={styles.period}>{exp.period}</div>}
-                                    {exp.shortDescription && <div className={styles.pillDesc}>{exp.shortDescription}</div>}
                                 </button>
 
                                 {/* Inline accordion detail under the pill */}

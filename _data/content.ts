@@ -3,7 +3,7 @@
 import React from 'react';
 import {
     FaReact, FaNodeJs, FaAws, FaDocker, FaJenkins, FaGitlab, FaAngular, FaPython, FaDatabase, FaHtml5, FaCss3Alt, FaJsSquare,
-    FaGitAlt, FaCloud, FaChartBar, FaUniversalAccess, FaLock, FaExchangeAlt, FaEye, FaCheckCircle
+    FaGitAlt, FaCloud, FaChartBar, FaUniversalAccess, FaLock, FaExchangeAlt, FaEye, FaCheckCircle, FaUsers, FaProjectDiagram, FaShieldAlt, FaRobot, FaChartLine
 } from 'react-icons/fa';
 import {
     SiKubernetes, SiMongodb, SiPostgresql, SiMysql, SiRedis, SiGoogleanalytics, SiSpring, SiNextdotjs, SiAnsible, SiExpress,
@@ -12,33 +12,26 @@ import {
 
 export const skillGroups = [
     {
-        category: 'Core Competencies & Tech Stack',
+        category: 'Leadership, Strategy, AI & Data-Driven Innovation',
         skills: [
-            { icon: React.createElement(FaReact, { color: "#61dafb" }), name: 'React', level: 'Expert' },
-            { icon: React.createElement(SiNextdotjs, { color: "#000" }), name: 'Next.js', level: 'Expert' },
-            { icon: React.createElement(FaAngular, { color: "#dd0031" }), name: 'Angular', level: 'Advanced' },
-            { icon: React.createElement(FaJsSquare, { color: "#f7df1e" }), name: 'JavaScript ES6', level: 'Expert' },
-            { icon: React.createElement(SiTypescript, { color: "#3178c6" }), name: 'TypeScript', level: 'Advanced' },
-            { icon: React.createElement(FaHtml5, { color: "#e34c26" }), name: 'HTML5', level: 'Expert' },
-            { icon: React.createElement(FaCss3Alt, { color: "#1572b6" }), name: 'CSS3', level: 'Advanced' },
-            { icon: React.createElement(SiSass, { color: "#cc6699" }), name: 'Sass', level: 'Advanced' },
-            { icon: React.createElement(SiRedux, { color: "#764abc" }), name: 'Redux', level: 'Advanced' },
-            { icon: React.createElement(FaUniversalAccess, { color: "#007bff" }), name: 'Accessibility (WCAG, A11y)', level: 'Advanced' },
-            { icon: React.createElement(SiMongodb, { color: "#47A248" }), name: 'MongoDB', level: 'Experienced' },
-            { icon: React.createElement(SiPostgresql, { color: "#336791" }), name: 'PostgreSQL', level: 'Experienced' },
-            { icon: React.createElement(SiMysql, { color: "#00758f" }), name: 'MySQL', level: 'Experienced' },
-            { icon: React.createElement(SiRedis, { color: "#d82c20" }), name: 'Redis', level: 'Experienced' },
-            { icon: React.createElement(FaGitlab, { color: "#e24329" }), name: 'GitLab', level: 'Experienced' },
+            { icon: React.createElement(FaUsers, { color: "var(--accent)" }), name: 'Led high-performing teams', level: 'Leadership' },
+            { icon: React.createElement(FaChartLine, { color: "var(--accent)" }), name: 'Driving technical roadmaps', level: 'Strategy' },
+            { icon: React.createElement(FaShieldAlt, { color: "var(--accent)" }), name: 'Mentorship and stakeholder alignment', level: 'Leadership' },
+            { icon: React.createElement(FaRobot, { color: "var(--accent)" }), name: 'Enterprise AI adoption', level: 'AI' },
+            { icon: React.createElement(FaProjectDiagram, { color: "var(--accent)" }), name: 'Predictive analytics', level: 'Data' },
         ],
     },
     {
-        category: 'Leadership, Strategy, AI & Data-Driven Innovation',
+        category: 'Technical Foundation & Ecosystems',
         skills: [
-            { icon: React.createElement(FaCheckCircle, { color: "#388e3c" }), name: 'Led high-performing teams', level: 'Leadership' },
-            { icon: React.createElement(FaChartBar, { color: "#17a2b8" }), name: 'Driving technical roadmaps', level: 'Strategy' },
-            { icon: React.createElement(FaLock, { color: "#333" }), name: 'Mentorship and stakeholder alignment', level: 'Leadership' },
-            { icon: React.createElement(FaCloud, { color: "#0078d4" }), name: 'Enterprise AI adoption', level: 'AI' },
-            { icon: React.createElement(FaDatabase, { color: "#f29111" }), name: 'Predictive analytics', level: 'Data' },
+            { icon: React.createElement(FaReact, { color: "#61dafb" }), name: 'React', level: 'Expert' },
+            { icon: React.createElement(SiNextdotjs, { color: "#000" }), name: 'Next.js', level: 'Expert' },
+            { icon: React.createElement(FaNodeJs, { color: "#3c873a" }), name: 'Node.js', level: 'Expert' },
+            { icon: React.createElement(FaPython, { color: "#3776ab" }), name: 'Python', level: 'Advanced' },
+            { icon: React.createElement(FaAws, { color: "#ff9900" }), name: 'AWS/Azure', level: 'Cloud' },
+            { icon: React.createElement(SiApachekafka, { color: "#231F20" }), name: 'Kafka', level: 'Event-driven' },
+            { icon: React.createElement(SiDatadog, { color: "#632ca6" }), name: 'Datadog', level: 'Observability' },
+            { icon: React.createElement(FaUniversalAccess, { color: "#007bff" }), name: 'Accessibility', level: 'Advanced' },
         ],
     },
     {

@@ -1,16 +1,27 @@
+.skillsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
 .skillsGroup {
     font-family: var(--font-ui);
-    margin-bottom: .5rem;
+    margin-bottom: .25rem;
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 10px 20px;
     align-items: start;
+    padding: 0.95rem 1rem;
+    border-radius: 18px;
+    background: var(--card);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.03);
 
     h3 {
         margin: 0;
         font-size: 0.95rem;
         font-weight: 700;
-        color: var(--color-heading);
+        color: var(--accent);
         padding-top: 4px;
     }
 
@@ -33,7 +44,7 @@
 
             &:hover,
             &:focus-within {
-                background: var(--color-link-hover);
+                background: rgba(15, 23, 42, 0.04);
             }
 
             .skillIcon {
@@ -44,6 +55,7 @@
                 justify-content: center;
                 cursor: pointer;
                 width: 100%;
+                color: var(--accent);
             }
 
             .skillName {
@@ -51,7 +63,7 @@
                 opacity: 1;
                 position: static;
                 background: none;
-                color: var(--color-primary);
+                color: var(--muted);
                 padding: 0;
                 border-radius: 0;
                 font-size: 0.5rem;
@@ -71,6 +83,7 @@
             &:focus-within .skillName {
                 visibility: visible;
                 font-weight: 700;
+                color: var(--accent);
             }
         }
 
@@ -80,10 +93,68 @@
     }
 }
 
+.featuredGroup {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(15, 23, 42, 0.02));
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    margin-bottom: 0.25rem;
+
+    h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.leadershipCards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.leadershipCard {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.04);
+
+    h4 {
+        margin: 0 0 0.4rem;
+        font-size: 0.95rem;
+        color: var(--accent);
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: var(--muted);
+    }
+}
+
+.softSkillsSection {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.softSkillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.8rem;
+    padding-left: 1rem;
+
+    li {
+        color: var(--muted);
+        font-size: 0.92rem;
+    }
+}
+
 @media (max-width: 700px) {
     .skillsGroup {
         flex-direction: column;
         gap: 1rem;
+        grid-template-columns: 1fr;
 
         h3 {
             font-size: 1rem;
@@ -105,5 +176,9 @@
                 }
             }
         }
+    }
+
+    .leadershipCards {
+        grid-template-columns: 1fr;
     }
 }

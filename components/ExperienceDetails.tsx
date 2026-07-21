@@ -9,6 +9,7 @@ type Exp = {
     period?: string;
     logo?: string;
     shortDescription?: string;
+    scope?: string;
     tools?: string[];
     responsibilities?: string[];
 };
@@ -36,12 +37,20 @@ export default function ExperienceDetails({ id, labelledBy, exp, onClose }: { id
             </div>
 
 
+            {exp.scope && <div className={styles.scopeText}><strong>Scope:</strong> {exp.scope}</div>}
+
             {exp.responsibilities && (
-                <ul className={styles.responsibilities}>
-                    {exp.responsibilities.map((r, i) => (
-                        <li key={i} dangerouslySetInnerHTML={{ __html: r }} />
-                    ))}
-                </ul>
+                <>
+                    <h4 className={styles.keyWinsTitle}>Key Wins</h4>
+                    <ul className={styles.responsibilities}>
+                        {exp.responsibilities.map((r, i) => (
+                            <li key={i} className={styles.responsibilityItem}>
+                                <span className={styles.bulletIcon}>✓</span>
+                                <span dangerouslySetInnerHTML={{ __html: r }} />
+                            </li>
+                        ))}
+                    </ul>
+                </>
             )}
         </div>
     );

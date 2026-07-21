@@ -4,6 +4,7 @@
     "period": "Feb 2024 - Present",
     "logo": "https://media.licdn.com/dms/image/v2/D560BAQHZVNCUIfytag/company-logo_100_100/company-logo_100_100/0/1719848403661/hyatt_logo?e=1752105600&v=beta&t=1sJHRk1Gws-d_g3B1NMUkRtUxJ3mufw2Nqsjz9L2QoY",
     "shortDescription": "Leading a 13-person engineering team across multiple mission-critical applications while modernizing guest services and scaling AI-enabled platform capabilities.",
+    "scope": "Director-level scope • 13-person team • 1,200+ properties",
     "tools": ["React", "Next.js", "Node.js", "Azure", "Kafka", "Datadog"],
     "responsibilities": [
       "<strong>Team leadership:</strong> Lead a 13-person engineering team with 5 full-stack and 8 front-end-focused engineers across guest services, call-center operations, and membership management.",
@@ -27,6 +28,7 @@
     "period": "Oct 2019 - Feb 2024",
     "logo": "https://media.licdn.com/dms/image/v2/D560BAQHZVNCUIfytag/company-logo_100_100/company-logo_100_100/0/1719848403661/hyatt_logo?e=1752105600&v=beta&t=1sJHRk1Gws-d_g3B1NMUkRtUxJ3mufw2Nqsjz9L2QoY",
     "shortDescription": "Drove cloud migration, platform modernization, and engineering-standard improvements across global hospitality applications.",
+    "scope": "Platform modernization and cloud strategy for global hospitality systems",
     "tools": ["React", "Next.js", "Node.js", "Azure", "Kafka", "Snowflake"],
     "responsibilities": [
       "<strong>Cloud migration:</strong> Led architecture and infrastructure optimization initiatives that reduced operating costs by about 20% while improving scalability and reliability.",

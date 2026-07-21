@@ -5,6 +5,7 @@ import ExperienceSection from "../components/Experience";
 import ProjectsSection from "../components/Projects";
 import SkillsSection from "../components/Skills";
 import Education from "../components/Education";
+import HeroSection from "../components/Hero";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <div className={styles.page}>
         <div className={styles.contentWithAside}>
           <main className={styles.main}>
+            <HeroSection />
             <AboutSection />
             <SkillsSection />
             <ExperienceSection />

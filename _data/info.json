@@ -80,12 +80,20 @@
       "Volunteer with the inclusion committee by exploring development opportunities, supporting colleague growth, and helping shape individual development roadmaps and training."
     ],
     "testimonials": [{
-        "name": "A. Smith",
-        "feedback": "Karthika’s leadership transformed our engineering culture and delivered results beyond expectations."
+        "name": "Kim K",
+        "feedback": "Consistently impressed by her ability to grasp complex business concepts and rapidly deliver high-quality, impactful features for our core platforms."
       },
       {
-        "name": "J. Doe",
-        "feedback": "A true mentor who invests in people and drives technical excellence."
+        "name": "Yanelis H",
+        "feedback": "Skilled engineering leader who seamlessly translates business needs into robust technical solutions while guiding cross-functional teams to deliver on time."
+      },
+      {
+        "name": "Ravi M",
+        "feedback": "Adapts to new technologies rapidly and consistently delivers high-quality engineering work under critical timelines."
+      },
+      {
+        "name": "Jerin I",
+        "feedback": "A natural problem solver whose strong technical capabilities and solution-oriented mindset consistently bring immense value to the team."
       }
     ]
   },

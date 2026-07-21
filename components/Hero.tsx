@@ -7,13 +7,13 @@ export default function Hero() {
     return (
         <section id="hero" className={`${styles.section} hero`} aria-label="Hero">
             <div className={styles.sectionContent}>
-                <h1>{info.hero.title || "Senior Product Engineering Leader"}</h1>
-                <h2>{info.hero.subTitle || "AI‑powered digital transformation | Driving digital transformation with precision and passion"}</h2>
-                <p className="lead">{info.about_me?.resumeSummary || info.about_me?.summary?.[0]}</p>
-                <div className="cta-group" style={{ marginTop: 16 }}>
-                    <a className="btn btn-primary" href="#projects">View selected work</a>
-                    {/* <a className="btn btn-outline" href="/resume">Download résumé</a> */}
-                    <a className="btn" href={`https://${info.contact.linkedin}`} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                <div className="heroContent">
+                    <div className="tag">Leadership • Strategy • AI</div>
+                    <p className="lead" dangerouslySetInnerHTML={{ __html: info.about_me?.resumeSummary || info.about_me?.summary?.[0] }} />
+                    <div className="cta-group">
+                        <a className="btn btn-primary" href="#experience">View Leadership Impact</a>
+                        <a className="btn btn-outline" href={`https://${info.contact.linkedin}`} target="_blank" rel="noopener noreferrer">Let’s Connect</a>
+                    </div>
                 </div>
             </div>
         </section>
