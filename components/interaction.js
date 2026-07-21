@@ -42,7 +42,7 @@ export function initInteraction() {
   let cursor = null;
 
   // keyboard: show focus ring for keyboard users only
-  const onMouseDown = () => { mouseUsed = true; document.documentElement.classList.add('using-mouse'); };
+  const onMouseDown = () => { document.documentElement.classList.add('using-mouse'); };
   const onKeyDown = (e) => { if (e.key === 'Tab') { document.documentElement.classList.remove('using-mouse'); } };
   window.addEventListener('mousedown', onMouseDown);
   window.addEventListener('keydown', onKeyDown);

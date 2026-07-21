@@ -18,13 +18,6 @@
     "hobbies": "When I’m not leading technical roadmaps or geeking out over technologies, I’m focused on my most important role: being <strong>a mom of two.</strong> <br>Parenthood has genuinely made me a stronger leader. It has refined my ability to prioritize under pressure, lead with deep empathy, and stay calm during \"system outages\"—whether they happen in a codebase or at the dinner table. You’ll often find us on family adventures, building STEM-focused LEGO robots, or in the middle of a <strong>\"Project Runway: Toddler Edition\"</strong> session where I put my crochet and knitting skills to use. <br>I am always learning, always building, and always ready for a new challenge—especially if it involves coffee, the cloud, or a creative DIY project."
   },
   "education": [{
-      "degree": "Applied Machine Learning and AI",
-      "university": "Cornell University",
-      "year": "Mar 2025",
-      "logo": "https://brand.cornell.edu/assets/images/downloads/logos/bold_cornell_seal/bold_cornell_seal.svg",
-      "skills": ["Machine Learning", "Applied AI", "AI Strategy", "Data-Driven Decision Making"]
-    },
-    {
       "degree": "M.C.A. (Master of Computer Applications)",
       "university": "Pondicherry University",
       "year": "2008 - 2011",
@@ -38,6 +31,14 @@
     }
   ],
   "certifications": [{
+      "name": "Applied Machine Learning and AI",
+      "issuer": "Cornell University",
+      "issueDate": "Mar 2025",
+      "logo": "https://brand.cornell.edu/assets/images/downloads/logos/bold_cornell_seal/bold_cornell_seal.svg",
+      "credential": "https://mycredentials.ecornell.cornell.edu/credential/oyHhdYstVP",
+      "skills": ["Machine Learning", "Applied AI", "AI Strategy", "Data-Driven Decision Making"]
+    },
+    {
       "name": "Accelerated Leadership Certification",
       "issuer": "DePaul University Executive Education",
       "issueDate": "Dec 2024",

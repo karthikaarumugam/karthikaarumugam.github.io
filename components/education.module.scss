@@ -52,8 +52,16 @@
         margin-bottom: 0.1rem;
     }
 
-    .year {
+    .year,
+    .skills {
         font-size: small;
+        text-align: justify
+    }
+
+    .skillsBadge:not(:last-child) {
+        &:after {
+            content: " | ";
+        }
     }
 }
 

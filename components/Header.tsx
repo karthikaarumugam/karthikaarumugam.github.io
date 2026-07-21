@@ -1,6 +1,6 @@
 "use client";
 import styles from "./header.module.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import info from "../_data/info.json";
@@ -17,20 +17,40 @@ const navLinks = [
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 1200);
+    const navRef = useRef<HTMLElement>(null);
     const pathname = usePathname();
     const router = useRouter();
-    // const [dark, setDark] = useState(false);
 
-    // useEffect(() => {
-    //     document.body.classList.toggle("dark", dark);
-    // }, [dark]);
-
+    // Close menu on route change
     useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+        setMenuOpen(false);
+    }, [pathname]);
+
+    // Handle clicks outside nav
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            if (navRef.current && !navRef.current.contains(e.target as Node)) {
+                setMenuOpen(false);
+            }
+        };
+        if (menuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => document.removeEventListener("mousedown", handleClickOutside);
+        }
+    }, [menuOpen]);
+
+    // Handle blur/focusout from nav container
+    useEffect(() => {
+        const handleFocusOut = (e: FocusEvent) => {
+            if (navRef.current && !navRef.current.contains(e.relatedTarget as Node)) {
+                setMenuOpen(false);
+            }
+        };
+        if (menuOpen && navRef.current) {
+            navRef.current.addEventListener("focusout", handleFocusOut);
+            return () => navRef.current?.removeEventListener("focusout", handleFocusOut);
+        }
+    }, [menuOpen]);
 
     const handleNavClick = (href: string) => {
         setMenuOpen(false);
@@ -64,13 +84,10 @@ export default function Header() {
                         />
                     </div>
 
-                    <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
+                    <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`} ref={navRef}>
                         <ul>
                             {navLinks.map((link) => (
-                                <li key={link.href}
-                                    style={{
-                                        opacity: menuOpen || windowWidth > 900 ? 1 : 0,
-                                    }}>
+                                <li key={link.href}>
                                     <a
                                         href={link.href}
                                         onClick={e => {
@@ -91,6 +108,7 @@ export default function Header() {
                         onClick={() => setMenuOpen((open) => !open)}
                         aria-label="Toggle navigation"
                         aria-expanded={menuOpen}
+                        type="button"
                     >
                         <span />
                         <span />

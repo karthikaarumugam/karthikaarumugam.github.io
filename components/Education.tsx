@@ -44,26 +44,26 @@ export default function Education() {
                                 <div className={styles.school}>{cert.issuer}</div>
                                 <div className={styles.year}>{cert.issueDate}</div>
                                 {cert.credential && (
-                                <a href={cert.credential} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
-                                    <FaExternalLinkAlt />
-                                </a>
+                                    <a href={cert.credential} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
+                                        <FaExternalLinkAlt />
+                                    </a>
                                 )}
-                                {/* {cert.skills && (
-                                    <div className={styles.skills} aria-hidden={false}>
-                                        {cert.skills.map((t) => (
-                                            <span key={t} className={styles.skillsBadge}>{t}</span>
-                                        ))}
-                                    </div>
-                                )} */}
                                 {cert.logo && (
                                     <Image
                                         src={cert.logo}
-                                        alt={cert.issuer}
+                                        alt={String(cert.issuer || cert.name || "Certification")}
                                         className={styles.eduLogo}
                                         width={40}
                                         height={40}
                                         style={{ marginLeft: "auto" }}
                                     />
+                                )}
+                                {cert.skills && (
+                                    <div className={styles.skills} aria-hidden={false}>
+                                        {cert.skills.map((t) => (
+                                            <span key={t} className={styles.skillsBadge}>{t}</span>
+                                        ))}
+                                    </div>
                                 )}
                             </div>
                         </div>
