@@ -1,92 +1,116 @@
 {
   "hero": {
     "name": "Karthika Arumugam",
-    "title": "Senior Product Engineering Leader",
-    "subTitle": "AI‑powered digital transformation | Driving digital transformation with precision and passion"
+    "title": "Engineering Leader | AI-Enabled Enterprise Platforms",
+    "subTitle": "Scaling systems across 1,200+ locations with AI-ready, mission-critical platforms"
   },
   "about_me": {
-    "resumeSummary": "With <strong>13 years of experience</strong> in software development and leadership, I’ve led teams to <strong>modernize legacy systems</strong>, <strong>scale enterprise applications</strong>, and align <strong>technology strategy</strong> with business goals. My expertise spans <strong>cloud-native architectures, DevOps, Agile development, system architecture, API integrations, CI/CD automation</strong>, and <strong>cloud migrations</strong>. I’ve delivered <strong>high-impact solutions</strong> across hospitality, travel, and enterprise tech, always focused on <strong>operational efficiency, security compliance</strong>, and <strong>enhancing user experiences</strong>.",
-    "title": "Engineering Leader | Building Scalable Solutions & Empowering Teams",
-    "subtitle": "Driving digital transformation, technical excellence, and inclusive growth.",
+    "resumeSummary": "Engineering leader with <strong>15+ years</strong> of experience building and scaling enterprise platforms, currently leading a <strong>13-person engineering team</strong> across multiple mission-critical applications. Proven track record in modernizing legacy systems, delivering cloud-native solutions, and driving platform integrations across data, analytics, security, and AI-enabled workflows. Known for translating technical complexity into business outcomes, improving reliability, and leading cross-functional teams through large-scale transformation.",
+    "title": "Engineering Leader - AI-Enabled Enterprise Platforms",
+    "subtitle": "Scaling systems across global properties, complex operations, and AI-enabled workflows.",
     "summary": [
-      "I am a <strong>Product Engineering Manager</strong> with over 13 years of experience in leading high-stakes digital transformations. My career has been defined by a simple goal: making technology work better for the people who use it. Whether I am architecting global cloud systems at Hyatt or guiding a team through a complex technical migration, I focus on building software that is scalable, secure, and genuinely aligned with business needs."
+      "I am an engineering leader focused on building reliable, scalable platforms that make everyday operations smoother for teams and customers. My work spans platform modernization, team leadership, AI-enabled developer tooling, and event-driven systems that power real-time experiences at enterprise scale."
     ],
     "background": [
-      "My leadership style is rooted in <strong>technical excellence and strategic foresight</strong>. I specialize in taking legacy complexity—what many call \"spaghetti code\"—and modernizing it into clean, cloud-native architectures. Recently, I have focused on Generative AI adoption, exploring how these tools can meaningfully streamline developer workflows and create smarter, more intuitive guest experiences without sacrificing security or stability.",
-      "Beyond the technical roadmaps, I am a dedicated mentor. I believe that the strongest products are built by teams that feel empowered and psychologically safe. I focus on creating inclusive engineering cultures where innovation isn't just encouraged, but a natural part of the daily routine."
-
+      "I recently completed <strong>Applied Machine Learning and AI</strong> through Cornell University and have been applying that learning to platform strategy, AI-assisted delivery workflows, and data-driven product decisions.",
+      "My leadership approach combines technical depth with operational rigor. I focus on translating complex system tradeoffs into clear business outcomes, improving reliability, and helping teams grow as they modernize legacy environments."
     ],
-    "hobbies": "When I’ m not leading technical roadmaps or geeking out over technologies, I’ m focused on my most important role: being <strong>a mom of two.</strong> <br>Parenthood has genuinely made me a stronger leader.It has refined my ability to prioritize under pressure, lead with deep empathy, and stay calm during \"system outages\"— whether they happen in a codebase or at the dinner table.You’ ll often find us on family adventures, building STEM - focused LEGO robots, or in the middle of a <strong>\"Project Runway: Toddler Edition\"</strong> session where I put my crochet and knitting skills to use. <br>I am always learning, always building, and always ready for a new challenge— especially if it involves coffee, the cloud, or a creative DIY project."
+    "hobbies": "When I’m not leading technical roadmaps or geeking out over technologies, I’m focused on my most important role: being <strong>a mom of two.</strong> <br>Parenthood has genuinely made me a stronger leader. It has refined my ability to prioritize under pressure, lead with deep empathy, and stay calm during \"system outages\"—whether they happen in a codebase or at the dinner table. You’ll often find us on family adventures, building STEM-focused LEGO robots, or in the middle of a <strong>\"Project Runway: Toddler Edition\"</strong> session where I put my crochet and knitting skills to use. <br>I am always learning, always building, and always ready for a new challenge—especially if it involves coffee, the cloud, or a creative DIY project."
   },
   "education": [{
-    "degree": "M.C.A. (Master of Computer Applications)",
-    "university": "Pondicherry University",
-    "year": "2008 - 2011",
-    "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
-  }, {
-    "degree": "B.C.A. (Bachelor of Computer Applications)",
-    "university": "Pondicherry University",
-    "year": "2005 - 2008",
-    "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
-  }],
+      "degree": "Applied Machine Learning and AI",
+      "university": "Cornell University",
+      "year": "Mar 2025",
+      "logo": "https://brand.cornell.edu/assets/images/brand/wordmark.jpg"
+    },
+    {
+      "degree": "M.C.A. (Master of Computer Applications)",
+      "university": "Pondicherry University",
+      "year": "2008 - 2011",
+      "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
+    },
+    {
+      "degree": "B.C.A. (Bachelor of Computer Applications)",
+      "university": "Pondicherry University",
+      "year": "2005 - 2008",
+      "logo": "https://www.pondiuni.edu.in/wp-content/uploads/2020/05/PU_Logo_Full.png"
+    }
+  ],
   "certifications": [{
-    "name": "Accelerated Leadership Certification",
-    "issuer": "DePaul University Executive Education",
-    "issueDate": "Dec 2024",
-    "logo": "https://images.credly.com/size/680x680/images/92863a15-3f78-436c-9d03-3793691fc40e/blob",
-    "credential": "https://www.credly.com/badges/26811054-54d7-4a45-a99c-7fb01e561e70/",
-    "skills": ["Communication skills", "Influencing Skills", "Leadership", "Personal Efficiency", "Strategic Thinking", "Team Management"]
-  }, {
-    "name": "Introduction to Generative AI",
-    "issuer": "Google Cloud Skills Boost",
-    "issueDate": "Mar 2025",
-    "logo": "https://cdn.qwiklabs.com/dkQVGBYS8HvCJHFPxPExnP3JVKTEoe6CpEKnTq8o2fo%3D",
-    "skills": ["Generative AI", "Machine Learning", "AI Models", "AI Applications"]
-  }, {
-    "name": "Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3",
-    "issuer": "Microsoft",
-    "issueDate": "Feb 2013",
-    "logo": "https://images.credly.com/size/680x680/images/84f513e4-256d-4aa0-a29d-973bcb39d87a/Programming_in_HTML5_with_JavaScript_and_Css3-01.png",
-    "credential": "https://www.credly.com/badges/34d3e0ad-e143-4df4-b736-4899c6bdbdaf",
-    "skills": ["Application Developer", "CSS3", "Data Security", "Data Validation", "HTML5", "JavaScript", "Object-based Programming", "Visual Studio", "Web Applications", "Web Developer"]
-  }, {
-    "name": "Professional Member",
-    "issuer": "IAAP - International Association of Accessibility Professionals",
-    "issueDate": "Feb 2023",
-    "expiryDate": "Mar 2024",
-    "logo": "https://images.credly.com/size/680x680/images/18ec1f34-c540-4da3-b2c2-10112f917b12/blob",
-    "credential": "https://www.credly.com/badges/c348df68-72b9-4a0d-9831-e0e02ba83657",
-    "skills": ["Accessibility Champion", "Advanced Networking", "Advocacy", "Diversity", "Inclusion"]
-  }],
+      "name": "Applied Machine Learning and AI",
+      "issuer": "Cornell University",
+      "issueDate": "Mar 2025",
+      "logo": "https://brand.cornell.edu/assets/images/brand/wordmark.jpg",
+      "skills": ["Machine Learning", "Applied AI", "AI Strategy", "Data-Driven Decision Making"]
+    },
+    {
+      "name": "Accelerated Leadership Certification",
+      "issuer": "DePaul University Executive Education",
+      "issueDate": "Dec 2024",
+      "logo": "https://images.credly.com/size/680x680/images/92863a15-3f78-436c-9d03-3793691fc40e/blob",
+      "credential": "https://www.credly.com/badges/26811054-54d7-4a45-a99c-7fb01e561e70/",
+      "skills": ["Communication skills", "Influencing Skills", "Leadership", "Personal Efficiency", "Strategic Thinking", "Team Management"]
+    },
+    {
+      "name": "Introduction to Generative AI",
+      "issuer": "Google Cloud Skills Boost",
+      "issueDate": "Mar 2025",
+      "logo": "https://cdn.qwiklabs.com/dkQVGBYS8HvCJHFPxPExnP3JVKTEoe6CpEKnTq8o2fo%3D",
+      "skills": ["Generative AI", "Machine Learning", "AI Models", "AI Applications"]
+    },
+    {
+      "name": "Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3",
+      "issuer": "Microsoft",
+      "issueDate": "Feb 2013",
+      "logo": "https://images.credly.com/size/680x680/images/84f513e4-256d-4aa0-a29d-973bcb39d87a/Programming_in_HTML5_with_JavaScript_and_Css3-01.png",
+      "credential": "https://www.credly.com/badges/34d3e0ad-e143-4df4-b736-4899c6bdbdaf",
+      "skills": ["Application Developer", "CSS3", "Data Security", "Data Validation", "HTML5", "JavaScript", "Object-based Programming", "Visual Studio", "Web Applications", "Web Developer"]
+    },
+    {
+      "name": "Professional Member",
+      "issuer": "IAAP - International Association of Accessibility Professionals",
+      "issueDate": "Feb 2023",
+      "expiryDate": "Mar 2024",
+      "logo": "https://images.credly.com/size/680x680/images/18ec1f34-c540-4da3-b2c2-10112f917b12/blob",
+      "credential": "https://www.credly.com/badges/c348df68-72b9-4a0d-9831-e0e02ba83657",
+      "skills": ["Accessibility Champion", "Advanced Networking", "Advocacy", "Diversity", "Inclusion"]
+    }
+  ],
   "leadership": {
-    "philosophy": "I believe in servant leadership—empowering teams, fostering trust, and enabling growth. My approach is to lead by example, encourage open communication, and celebrate collective wins.",
+    "philosophy": "I believe in servant leadership—empowering teams, fostering trust, and enabling growth. My approach is to lead by example, encourage open communication, and create space for people to do their best work.",
     "team_successes": [
-      "Mentored engineers into leadership roles and built a culture of inclusion.",
-      "Drove Agile adoption, resulting in faster delivery and higher team morale.",
-      "Orchestrated multi-system integrations across 13+ services, optimizing operations."
+      "Lead a 13-person engineering team delivering mission-critical applications across 1,200+ properties.",
+      "Consolidated 15+ legacy systems into one guest-services interface that cuts service interaction time in half.",
+      "Scaled AI-enabled developer tooling and event-driven infrastructure to support modern enterprise workflows."
     ],
     "testimonials": [{
-      "name": "A. Smith",
-      "feedback": "Karthika’s leadership transformed our engineering culture and delivered results beyond expectations."
-    }, {
-      "name": "J. Doe",
-      "feedback": "A true mentor who invests in people and drives technical excellence."
-    }]
+        "name": "A. Smith",
+        "feedback": "Karthika’s leadership transformed our engineering culture and delivered results beyond expectations."
+      },
+      {
+        "name": "J. Doe",
+        "feedback": "A true mentor who invests in people and drives technical excellence."
+      }
+    ]
   },
   "blog_insights": {
     "articles": [{
-      "title": "Modernizing Legacy Systems: Lessons Learned",
-      "url": "/blog/modernizing-legacy-systems"
-    }, {
-      "title": "Building High-Performing Teams in Tech",
-      "url": "/blog/high-performing-teams"
-    }, {
-      "title": "Cloud Migration: Pitfalls & Best Practices",
-      "url": "/blog/cloud-migration-best-practices"
-    }, {
-      "title": "Leading with Empathy in Engineering",
-      "url": "/blog/leading-with-empathy"
-    }]
+        "title": "Modernizing Legacy Systems: Lessons Learned",
+        "url": "/blog/modernizing-legacy-systems"
+      },
+      {
+        "title": "Building High-Performing Teams in Tech",
+        "url": "/blog/high-performing-teams"
+      },
+      {
+        "title": "Cloud Migration: Pitfalls & Best Practices",
+        "url": "/blog/cloud-migration-best-practices"
+      },
+      {
+        "title": "Leading with Empathy in Engineering",
+        "url": "/blog/leading-with-empathy"
+      }
+    ]
   },
   "contact": {
     "phone": "(309) 531-6743",
