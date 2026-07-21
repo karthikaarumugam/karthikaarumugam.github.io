@@ -21,7 +21,8 @@
       "degree": "Applied Machine Learning and AI",
       "university": "Cornell University",
       "year": "Mar 2025",
-      "logo": "https://brand.cornell.edu/assets/images/brand/wordmark.jpg"
+      "logo": "https://brand.cornell.edu/assets/images/downloads/logos/bold_cornell_seal/bold_cornell_seal.svg",
+      "skills": ["Machine Learning", "Applied AI", "AI Strategy", "Data-Driven Decision Making"]
     },
     {
       "degree": "M.C.A. (Master of Computer Applications)",
@@ -37,13 +38,6 @@
     }
   ],
   "certifications": [{
-      "name": "Applied Machine Learning and AI",
-      "issuer": "Cornell University",
-      "issueDate": "Mar 2025",
-      "logo": "https://brand.cornell.edu/assets/images/brand/wordmark.jpg",
-      "skills": ["Machine Learning", "Applied AI", "AI Strategy", "Data-Driven Decision Making"]
-    },
-    {
       "name": "Accelerated Leadership Certification",
       "issuer": "DePaul University Executive Education",
       "issueDate": "Dec 2024",
@@ -81,7 +75,9 @@
     "team_successes": [
       "Lead a 13-person engineering team delivering mission-critical applications across 1,200+ properties.",
       "Consolidated 15+ legacy systems into one guest-services interface that cuts service interaction time in half.",
-      "Scaled AI-enabled developer tooling and event-driven infrastructure to support modern enterprise workflows."
+      "Scaled AI-enabled developer tooling and event-driven infrastructure to support modern enterprise workflows.",
+      "Serve as a committee member for Women @ Hyatt, contributing to equity, career growth, and data-informed advocacy for women in technology.",
+      "Volunteer with the inclusion committee by exploring development opportunities, supporting colleague growth, and helping shape individual development roadmaps and training."
     ],
     "testimonials": [{
         "name": "A. Smith",
